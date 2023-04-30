@@ -11,17 +11,22 @@
       body {
         background-image: url(./Background.png);
         background-position: center;
-        background-repeat: repeat-y;
-        background-size: contain;
+        background-size: cover;
         backdrop-filter: blur(10px);
+        overflow: hidden;
+      }
+      .container {
+        display: flex;
+        
+        overflow: auto;
       }
       .table{
         background-color: #e2e2e293;
       }
     </style>
 </head>
-<body class="py-5">
-    <div class="container text-center">
+<body>
+    <div class="container text-center py-2">
         <table class="table table-striped rounded-top">
             <thead>
               <tr>
