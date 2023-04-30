@@ -1,6 +1,6 @@
 const tbody = document.getElementById("tbody");
 const spinner = document.getElementById("spinner");
-const url = "http://localhost/adventure%20jam/";
+const url = "http://adventurejam.22web.org/";
 
 const xhr = new XMLHttpRequest();
 const fetch = ()=>{
