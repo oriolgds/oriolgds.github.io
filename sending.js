@@ -15,7 +15,7 @@ document.getElementById('contact-form').addEventListener('submit', (e)=>{
 	console.log(postData);
 	$.ajax({
 		type: "POST",
-		url: "send.php",
+		url: "http://oriol.22web.org/send.php",
 		data: postData,
 		success: function (response) {
 			console.log(response);
