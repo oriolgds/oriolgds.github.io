@@ -1,0 +1,77 @@
+/*Sugestion button*/
+.sugestion-button {
+	padding: 10px;
+	background-color: yellow;
+	font-size: 20px;
+	color: black;
+	cursor: pointer;
+	position: fixed;
+	bottom: 20px;
+	left: 20px;
+	border-radius: 50%;
+	border: none;
+	-webkit-box-shadow: 5px 5px 15px 2px rgba(0,0,0,0.5); 
+	box-shadow: 5px 5px 15px 2px rgba(0,0,0,0.5);
+	z-index: 100;
+	filter: opacity(90%);
+	display: none;
+}
+#light-sugestion {
+	display: inline;
+}
+#cross-sugestion {
+	display: none;
+}
+.sugestion-form {
+	transform: scale(0);
+	filter: opacity(0%);
+	margin: auto;
+	background: #29B8EB;
+	background: -moz-linear-gradient(top, #29B8EB 0%, #2776EB 100%);
+	background: -webkit-linear-gradient(top, #29B8EB 0%, #2776EB 100%);
+	background: linear-gradient(to bottom, #29B8EB 0%, #2776EB 100%);
+	-webkit-box-shadow: 0px 4px 15px 0px rgba(0,0,0,0.5); 
+	box-shadow: 0px 4px 15px 0px rgba(0,0,0,0.5);
+	height: 330px;
+	width: 90%;
+	max-width: 636px;
+	padding: 30px;
+	border-radius: 15px;
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	left: 0;
+	z-index: 50;
+	transition: 0.5s all;
+}
+.sugestion-form.animate-scale-up {
+	transform: scale(1);
+	filter: opacity(100%);
+}
+@media (max-width: 260px) {
+	.sugestion-form {
+		height: calc(100% - 50px);
+	}
+}
+textarea {
+	width: 100%;
+	height: 150px;
+	padding: 10px;
+	border: 2px dotted #002dd0;
+	outline: none;
+	background-color: white;
+	resize: none;
+	border-radius: 8px;
+}
+.background-solid {
+	background-color: white;
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	left: 0;
+	z-index: 49;
+	display: none;
+	filter: opacity(90%);
+}

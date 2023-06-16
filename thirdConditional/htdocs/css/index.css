@@ -1,0 +1,157 @@
+.background-color-blue {
+	background-color: #002dd0;
+}
+.sticky-position {
+	position: sticky;
+}
+/* Color barra de navegación */
+.bg-custom-color {
+	background-color: #d27c43;
+}
+/* Personalización scrollbar */
+body::-webkit-scrollbar {
+    -webkit-appearance: none;
+}
+body::-webkit-scrollbar:vertical {
+    width: 13px;
+}
+body::-webkit-scrollbar-button:increment,body::-webkit-scrollbar-button {
+    display: none;
+}
+body::-webkit-scrollbar:horizontal {
+    height: 10px;
+}
+body::-webkit-scrollbar-thumb {
+    background-color: #002dd0;
+    border: 3.5px solid #fff;
+	border-radius: 10px;
+}
+body::-webkit-scrollbar-track {
+	background-color: #fff;  
+}
+/*Separadores*/
+.separator {
+	visibility: hidden;
+	height: 60px;	
+}
+.go-to-href {
+	visibility: hidden;
+	height: 5px;
+}
+.bi {
+	vertical-align: auto;
+}
+/*Form styles*/
+form {
+	margin: auto;
+}
+.container-form {
+	margin: auto;
+	background: #29B8EB;
+	background: -moz-linear-gradient(top, #29B8EB 0%, #2776EB 100%);
+	background: -webkit-linear-gradient(top, #29B8EB 0%, #2776EB 100%);
+	background: linear-gradient(to bottom, #29B8EB 0%, #2776EB 100%);
+	-webkit-box-shadow: 0px 4px 15px 0px rgba(0,0,0,0.5); 
+	box-shadow: 0px 4px 15px 0px rgba(0,0,0,0.5);
+	height: auto;
+	width: 90%;
+	max-width: 636px;
+	padding: 30px;
+	border-radius: 15px;
+}
+.result-correct-answers {
+	display: none;
+	margin: auto;
+	background: #29B8EB;
+	background: -moz-linear-gradient(top, #29B8EB 0%, #2776EB 100%);
+	background: -webkit-linear-gradient(top, #29B8EB 0%, #2776EB 100%);
+	background: linear-gradient(to bottom, #29B8EB 0%, #2776EB 100%);
+	-webkit-box-shadow: 0px 4px 15px 0px rgba(0,0,0,0.5); 
+	box-shadow: 0px 4px 15px 0px rgba(0,0,0,0.5);
+	height: auto;
+	width: 90%;
+	max-width: 636px;
+	padding: 30px;
+	border-radius: 15px;
+}
+.display-6 {
+	margin-bottom: 20px;
+}
+input[type = radio]{
+	cursor: pointer; cursor: hand;
+}
+.form-check {
+	margin-bottom: 10px;
+}
+label {
+	cursor: pointer; cursor: hand;
+}
+/* Voice reader */
+.voice-reader {
+	transition: .2s all;
+	border: none;
+	border-radius: 10px;
+	position: relative;
+	top: -5px;
+	left: 90%;
+	padding: 8px;
+}
+.svg-volume {
+	color: #212529;
+}
+.voice-reader:hover {
+	background-color: #002dd0;
+}
+.voice-reader:hover .svg-volume {
+	color: #e2e2e2;
+}
+@media (max-width: 460px) {
+	.voice-reader {
+		position: relative;
+		top: -5px;
+		left: 80%;
+	}
+}
+@media (max-width: 280px) {
+	.voice-reader {
+		position: relative;
+		top: -5px;
+		left: 70%;
+	}
+}
+@media (max-width: 210px) {
+	.voice-reader {
+		position: relative;
+		top: -5px;
+		left: 0px;
+	}
+}
+.d-background {
+	background: -moz-linear-gradient(top, #29B8EB 0%, #2776EB 100%);
+	background: -webkit-linear-gradient(top, #29B8EB 0%, #2776EB 100%);
+	background: linear-gradient(to bottom, #29B8EB 0%, #2776EB 100%);
+}
+/*Input type text*/
+.input-text-complete {
+	width: auto;
+	padding: 5px;
+	border-radius: 10px;
+	margin: 5px;
+	border: 3px #002dd0 solid;
+	font-size: 17px;
+	color: black;
+	outline: none;
+}
+@media (max-width: 300px) {
+	.input-text-complete {
+		width: 100%;
+	}
+}
+
+/* Video */
+video {
+	width: 90%;
+	max-width: 600px;
+	border: none;
+	margin: 0px;
+}
