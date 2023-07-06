@@ -2,7 +2,7 @@ appbar {
    position: fixed;
    top: 0px;
    left: 0px;
-   background-color: #f4f4f4;
+   background-color: #444;
    background-image: url(backgrounds/Beach.png);
    background-repeat: no-repeat;
    background-position: center;
