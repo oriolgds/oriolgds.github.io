@@ -1,0 +1,28 @@
+.btn-cr i {
+    font-size: 30px;
+}
+carrousel {
+    display: flex;
+    width: calc(100% - 40px);
+    margin: 20px 20px;
+    height: 200px;
+    background-color: #212121;
+    border-radius: 20px;
+    padding: 0px 20px;
+}
+carrousel .cr-previous {
+    position: relative;
+    top: 50%;
+    left: 0px;
+    transform: translateY(-50%);
+}
+carrousel .cr-posterior {
+    position: relative;
+    top: 50%;
+    right: 0px;
+    transform: translateY(-50%);
+}
+carrousel .cr-content {
+    width: 100%;
+    margin: 10px;
+}
