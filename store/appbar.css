@@ -1,9 +1,9 @@
 appbar {
-   position: absolute;
+   position: fixed;
    top: 0px;
    left: 0px;
    background-color: #f4f4f4;
-   height: 100px;
+   height: 120px;
    width: calc(100% - 40px);
    margin: 10px 20px;
    display: flex;
@@ -11,14 +11,112 @@ appbar {
    justify-content: center;
    border-radius: 50px;
 }
+@keyframes appbarAnim {
+    
+}
 appbar .title {
-    position: relative;
+    position: fixed;
     text-align: center;
     font-size: 40px;
     font-family: 'Carter One', cursive;
+    animation-name: changeFont;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
 }
 appbar .phrases {
-    position: relative;
-    bottom: 0px;
+    max-lines: 1;
+    height: 20px;
+}
+appbar .phrases::before {
+    position: fixed;
+    top: 95px;
     text-align: center;
+    content: 'Un lugar donde la productividad se potencia con apps inteligentes.';
+    transform: translateX(-50%);
+    animation-name: phrasesAnim, changeContent;
+    animation-duration: 2s, 20s;
+    animation-delay: 0s, 1s;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;   
+    width: 100%; 
+}
+@keyframes changeContent {
+    0% {
+        content: 'Un lugar donde la productividad se potencia con apps inteligentes.';
+    }
+    10% {
+        content: 'Un lugar donde encuentras las mejores apps a tu alcance.';
+    }
+    20% {
+        content: 'Un lugar donde cada toque en la pantalla abre un nuevo mundo.';
+    }
+    30% {
+        content: 'Un lugar donde la tecnología y la creatividad convergen en apps sorprendentes.';
+    }
+    40% {
+        content: 'Un lugar donde la funcionalidad se encuentra con la diversión.';
+    }
+    50% {
+        content: 'Un lugar donde exploras un universo de posibilidades móviles.';
+    }
+    60% {
+        content: 'Un lugar donde tus necesidades encuentran su aplicación perfecta.';
+    }
+    70% {
+        content: 'Un lugar donde la personalización es la clave de cada aplicación.';
+    }
+    80% {
+        content: 'Un lugar donde las aplicaciones transforman tu mundo.';
+    }
+    90% {
+        content: 'Un lugar donde las ideas cobran vida digitalmente.';
+    }
+}
+@keyframes phrasesAnim {
+    0% {
+        opacity: 0;
+        top: 105px;
+    }
+    33%, 66% {
+        opacity: 1;
+        top: 95px;
+    }
+    100% {
+        opacity: 0;
+        top: 85px;
+    }
+}
+@keyframes changeFont {
+    0% {
+        font-family: 'Carter One', cursive;
+    }
+    10% {
+        font-family: 'Frijole', cursive;
+    }
+    20% {
+        font-family: 'Fasthand', cursive;
+    }
+    30% {
+        font-family: 'Luckiest Guy', cursive;
+    }
+    40% {
+        font-family: 'Great Vibes', cursive;
+    }
+    50% {
+        font-family: 'Monoton', cursive;
+    }
+    60% {
+        font-family: 'Kablammo', cursive;
+    }
+    70% {
+        font-family: 'Press Start 2P', cursive;
+    }
+    80% {
+        font-family: 'Lobster', cursive;
+    }
+    90% {
+        font-family: 'Yellowtail', cursive;
+    }
 }
