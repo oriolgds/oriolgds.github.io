@@ -3,7 +3,7 @@ appbar {
    top: 0px;
    left: 0px;
    background-color: #444;
-   background-image: url(backgrounds/Beach.png);
+   background-image: url(../backgrounds/Beach.png);
    background-repeat: no-repeat;
    background-position: center;
    background-size: cover;
@@ -20,9 +20,15 @@ appbar {
    animation-delay: 0s;
    animation-fill-mode: forwards;
 }
+.margin-top {
+    height: 160px;
+}
 @media (max-width: 560px) {
     appbar {
         height: 330px;
+    }
+    .margin-top {
+        height: 360px;
     }
 }
 appbarimg {
