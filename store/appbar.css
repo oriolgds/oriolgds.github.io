@@ -3,19 +3,50 @@ appbar {
    top: 0px;
    left: 0px;
    background-color: #f4f4f4;
-   height: 120px;
+   background-image: url(backgrounds/Beach.png);
+   background-repeat: no-repeat;
+   background-position: center;
+   background-size: cover;
+   height: 130px;
    width: calc(100% - 40px);
    margin: 10px 20px;
    display: flex;
    align-items: center;
    justify-content: center;
    border-radius: 50px;
+   z-index: 10;
+   animation-name: appbarAnim;
+   animation-duration: 2s;
+   animation-delay: 0s;
+   animation-fill-mode: forwards;
+}
+appbarimg {
+    z-index: 15;
 }
 @keyframes appbarAnim {
-    
+    0%, 30% {
+        position: fixed;
+        top: 0px;
+        left: 0px;
+        border-radius: 0px;
+        margin: 0px;
+        width: 100%;
+        height: 100%;
+    }
+    50% {
+        border-radius: 50px;
+        height: calc(100% - 40px);
+        width: calc(100% - 40px);
+        margin: 10px 20px;
+    }
+    100% {
+        position: absolute;
+        top: 0px;
+        left: 0px;
+    }
 }
 appbar .title {
-    position: fixed;
+    position: absolute;
     text-align: center;
     font-size: 40px;
     font-family: 'Carter One', cursive;
@@ -23,24 +54,28 @@ appbar .title {
     animation-duration: 2s;
     animation-fill-mode: forwards;
     animation-iteration-count: infinite;
+    z-index: 20;
 }
 appbar .phrases {
     max-lines: 1;
     height: 20px;
+    z-index: 20;
 }
 appbar .phrases::before {
-    position: fixed;
+    position: absolute;
     top: 95px;
     text-align: center;
     content: 'Un lugar donde la productividad se potencia con apps inteligentes.';
     transform: translateX(-50%);
     animation-name: phrasesAnim, changeContent;
     animation-duration: 2s, 20s;
-    animation-delay: 0s, 1s;
+    animation-delay: 2s, 1s;
     animation-timing-function: ease-in-out;
     animation-fill-mode: forwards;
     animation-iteration-count: infinite;   
     width: 100%; 
+    z-index: 20;
+    opacity: 0;
 }
 @keyframes changeContent {
     0% {
