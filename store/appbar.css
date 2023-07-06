@@ -20,6 +20,11 @@ appbar {
    animation-delay: 0s;
    animation-fill-mode: forwards;
 }
+@media (max-width: 560px) {
+    appbar {
+        height: 330px;
+    }
+}
 appbarimg {
     z-index: 15;
 }
