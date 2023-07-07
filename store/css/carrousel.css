@@ -10,6 +10,7 @@ carrousel {
     border-radius: 20px;
     padding: 0px 20px;
 }
+/* Button styles START */
 carrousel .cr-previous {
     position: relative;
     top: 50%;
@@ -22,29 +23,67 @@ carrousel .cr-posterior {
     right: 0px;
     transform: translateY(-50%);
 }
+/* Button styles END */
 carrousel .cr-content {
     display: inline-flex;
     width: 100%;
     margin: 10px;
 }
+
+/* Card styles */
 carrousel .cr-content .card {
-    transition: 200ms transform;
+    transition: 200ms all;
     position: relative;
     height: 230px;
     width: 190px;
     border-radius: 25px;
     transform: translateY(0px);
     cursor: pointer;
+    background-color: rgba(226, 226, 226, 0.2);
+    -webkit-box-shadow: 0 3px 10px 3px #383838;
+-moz-box-shadow: 0 3px 10px 3px #383838;
+box-shadow: 0 3px 10px 3px #383838;
 }
-carrousel .cr-content .card:hover {    
-    transform: translateY(-5px);
-}
+
 carrousel .cr-content .card img {
-    width: 120px;
-    height: 120px;
+    width: 140px;
+    height: 140px;
     position: absolute;
-    top: 20px;
+    top: 45px;
     left: 50%;
     transform: translateX(-50%);
     border-radius: 25px;
+}
+carrousel .cr-content .card .title {
+    position: absolute;
+    top: 4px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: calc(100% - 20px);
+    text-align: center;
+    background-color: #242424;
+    color: white;
+    border-radius: 20px;
+    font-size: 20px;
+}
+carrousel .cr-content .card .description {
+    color: white;
+    position: absolute;
+    top: 180px;
+    text-align: justify;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    max-width: 170px;
+    max-height: 50px;
+    font-size: 15px;
+    margin: 10px;
+}
+/* Card hover effects */
+carrousel .cr-content .card:hover {    
+    transform: translateY(-5px);
+    background-color: rgb(115, 44, 151, 0.6);
+    -webkit-box-shadow: 0 8px 10px 3px #383838;
+-moz-box-shadow: 0 8px 10px 3px #383838;
+box-shadow: 0 8px 10px 3px #383838;
 }
