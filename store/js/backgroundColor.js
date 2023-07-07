@@ -1,5 +1,5 @@
 window.onscroll = ()=>{
-    if(window.scrollY > 150){
+    if(window.scrollY > 30){
         document.body.style.backgroundColor = "#e2e2e2";
     }
     else {
