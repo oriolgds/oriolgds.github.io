@@ -40,9 +40,9 @@ carrousel .cr-content .card {
     transform: translateY(0px);
     cursor: pointer;
     background-color: rgba(226, 226, 226, 0.2);
-    -webkit-box-shadow: 0 3px 10px 3px #383838;
--moz-box-shadow: 0 3px 10px 3px #383838;
-box-shadow: 0 3px 10px 3px #383838;
+    -webkit-box-shadow: 0 3px 10px 3px #272727;
+-moz-box-shadow: 0 3px 10px 3px #272727;
+box-shadow: 0 3px 10px 3px #272727;
 }
 
 carrousel .cr-content .card img {
@@ -83,7 +83,7 @@ carrousel .cr-content .card .description {
 carrousel .cr-content .card:hover {    
     transform: translateY(-5px);
     background-color: rgb(115, 44, 151, 0.6);
-    -webkit-box-shadow: 0 8px 10px 3px #383838;
--moz-box-shadow: 0 8px 10px 3px #383838;
-box-shadow: 0 8px 10px 3px #383838;
+    -webkit-box-shadow: 0 8px 10px 3px #272727;
+-moz-box-shadow: 0 8px 10px 3px #272727;
+box-shadow: 0 8px 10px 3px #272727;
 }
