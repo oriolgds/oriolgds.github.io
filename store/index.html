@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ors Store</title>
+    <link rel="shortcut icon" href="icon.png" type="image/x-icon">
     <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="css/appbar.css">
     <link rel="stylesheet" href="css/ripple.css">
@@ -11,6 +12,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
     <script defer src="bootstrap/js/bootstrap.bundle.js"></script>
     <script async src="js/backgroundColor.js"></script>
+    <script async src="js/backgroundImageCards.js"></script>
     <!-- Google fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -21,12 +23,13 @@
             background-color: #212121;
         }
     </style>
+    <!-- https://fonts.google.com/share?selection.family=Carter%2BOne%7CFasthand%7CFoldit%7CFrijole%7CGreat%2BVibes%7CKablammo%7CLobster%7CLuckiest%2BGuy%7CMonoton%7CPress%2BStart%2B2P%7CYellowtail -->
 </head>
 <body>
-    <appbar>
+    <!-- <appbar>
         <div class="title">Ors Store</div>
         <div class="phrases"></div>
-    </appbar>
+    </appbar> -->
     <div class="margin-top"></div>
     <carrousel>
         <button class="ripple btn-cr cr-previous"><i class="bi bi-caret-left"></i></button>
@@ -35,7 +38,10 @@
     </carrousel>
     <carrousel>
         <button class="ripple btn-cr cr-previous"><i class="bi bi-caret-left"></i></button>
-        <div class="cr-content"></div>
+        <div class="cr-content">
+            <div class="card ors-chat">
+            </div>
+        </div>
         <button class="ripple btn-cr cr-posterior"><i class="bi bi-caret-right"></i></button>
     </carrousel>
     <carrousel>

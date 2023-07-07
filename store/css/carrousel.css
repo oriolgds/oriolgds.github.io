@@ -23,6 +23,12 @@ carrousel .cr-posterior {
     transform: translateY(-50%);
 }
 carrousel .cr-content {
+    display: inline-flex;
     width: 100%;
     margin: 10px;
+}
+carrousel .cr-content .card {
+    height: 180px;
+    width: 170px;
+    border-radius: 25px;
 }
