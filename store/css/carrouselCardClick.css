@@ -1,0 +1,45 @@
+carrousel .cr-content .card.selected img {
+    opacity: 0;
+}
+#detail-view {
+    background-color: #eee;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 0px;
+    height: 0px;
+    padding: 0px;
+    opacity: 0;
+}
+#detail-view.show {
+    animation-name: detailView;
+    animation-duration: 1.2s;
+    animation-fill-mode: forwards;
+    padding: 90px;
+    opacity: 1;
+}
+#detail-view img.detail-view-img-logo {
+    border-radius: 25px;
+}
+@keyframes detailView {
+    0%, 40% {        
+        border-radius: 25px;
+    }
+    0% {        
+        width: 0px;
+        height: 0px;
+    }
+    40%, 70% {
+        width: calc(100% - 30px);
+        height: calc(100% - 30px);
+    }
+    70% {
+        border-radius: 0px;
+    }
+    100% {
+        width: 100%;
+        height: 100%;
+    }
+
+}

@@ -46,7 +46,8 @@ carrousel .cr-content .card {
 }
 
 carrousel .cr-content .card img {
-    transition: 500ms all;
+    opacity: 1;
+    transition: 500ms all, 0ms opacity;
     width: 140px;
     height: 140px;
     position: absolute;
