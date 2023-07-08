@@ -31,10 +31,10 @@ window.addEventListener('load', ()=>{
             img.style.zIndex = 1000;
             document.body.appendChild(img);
             setTimeout(() => {
-                img.style.top = "100px";
-                img.style.left = "100px";
-                img.style.width = "500px";
-                img.style.height = "500px";
+                img.style.top = "90px";
+                img.style.left = "90px";
+                img.style.width = "300px";
+                img.style.height = "300px";
             }, 200);
         });
     });
