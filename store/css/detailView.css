@@ -9,4 +9,6 @@
 }
 #detail-view-top-container .description {
     order: 2;
+    margin-left: 20px;
+    font-family: 'Comfortaa', cursive;
 }
