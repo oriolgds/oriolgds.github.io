@@ -29,23 +29,21 @@ carrousel .cr-content .card.selected img {
     border-radius: 25px;
 }
 @keyframes detailView {
-    0%, 40% {        
-        border-radius: 25px;
-    }
     0% {  
         width: 0px;
         height: 0px;
+        border-radius: 25px;
     }
     40%, 70% {
         width: calc(100% - 30px);
         height: calc(100% - 30px);
     }
     70% {
-        border-radius: 0px;
+        border-radius: 25px;
     }
     100% {
         width: 100%;
         height: 100%;
+        border-radius: 0px;
     }
-
 }
