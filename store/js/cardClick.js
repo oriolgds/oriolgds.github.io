@@ -1,5 +1,6 @@
 window.addEventListener('load', ()=>{
     const detailView =  document.getElementById("detail-view");
+    const detailViewTopContainer = document.getElementById("detail-view-top-container");
     const cards = document.querySelectorAll('.cr-card');
     cards.forEach(card => {
         card.addEventListener('click', (e)=>{
@@ -36,6 +37,15 @@ window.addEventListener('load', ()=>{
             detailImg.style.zIndex = 1100;
             detailImg.classList.add("detail-view-img-logo");
             document.body.appendChild(img);
+
+            // Create the placeholder for the image to show the description on position
+            let placeholder = document.createElement("img");
+            placeholder.style.width = "300px";
+            placeholder.style.height = "300px";
+            placeholder.style.opacity = "0";
+            placeholder.src = img.src;
+            placeholder.classList.add = "placeholder";
+            detailViewTopContainer.appendChild(placeholder);
             setTimeout(() => {
                 if(window.innerWidth < 500){
                     img.style.top = "20px";
@@ -51,9 +61,10 @@ window.addEventListener('load', ()=>{
                 
             }, 200);
             setTimeout(() => {
+                placeholder.remove();
                 document.getElementById("detail-view-top-container").appendChild(detailImg);
                 img.remove();
-            }, 1200);
+            }, 1002000);
         });
     });
 });
