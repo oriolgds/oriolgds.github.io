@@ -11,6 +11,7 @@ carrousel .cr-content .card.selected img {
     height: 0px;
     padding: 0px;
     opacity: 0;
+    z-index: 20;
 }
 #detail-view.show {
     transition: 500ms padding;
