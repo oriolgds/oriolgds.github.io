@@ -1,5 +1,6 @@
 #detail-view-top-container {
     display: flex;
+    flex-wrap: wrap;
 }
 #detail-view-top-container .placeholder {
     order: 0;
@@ -10,5 +11,12 @@
 #detail-view-top-container .description {
     order: 2;
     margin-left: 20px;
+    margin-top: 20px;
     font-family: 'Comfortaa', cursive;
+    width: calc(100% - 400px);
+}
+@media (max-width: 730px) {
+    #detail-view-top-container .description {
+        width: 100%;
+    }
 }

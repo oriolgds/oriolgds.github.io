@@ -36,8 +36,8 @@ carrousel .cr-content .card.selected img {
         border-radius: 25px;
     }
     40%, 70% {
-        width: calc(100% - 30px);
-        height: calc(100% - 30px);
+        width: calc(100% - 60px);
+        height: calc(100% - 60px);
     }
     70% {
         border-radius: 25px;

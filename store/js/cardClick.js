@@ -64,7 +64,7 @@ window.addEventListener('load', ()=>{
                 placeholder.remove();
                 document.getElementById("detail-view-top-container").appendChild(detailImg);
                 img.remove();
-            }, 1002000);
+            }, 1200);
         });
     });
 });
