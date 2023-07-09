@@ -37,13 +37,21 @@ window.addEventListener('load', ()=>{
             detailImg.classList.add("detail-view-img-logo");
             document.body.appendChild(img);
             setTimeout(() => {
-                img.style.top = "90px";
-                img.style.left = "90px";
+                if(window.innerWidth < 500){
+                    img.style.top = "20px";
+                    img.style.left = "20px";
+                }
+                else {
+                    img.style.top = "90px";
+                    img.style.left = "90px";
+                    
+                }
                 img.style.width = "300px";
                 img.style.height = "300px";
+                
             }, 200);
             setTimeout(() => {
-                detailView.appendChild(detailImg);
+                document.getElementById("detail-view-top-container").appendChild(detailImg);
                 img.remove();
             }, 1200);
         });
