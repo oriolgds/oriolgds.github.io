@@ -1,9 +1,19 @@
-window.addEventListener('load', ()=>{
-    const detailView =  document.getElementById("detail-view");
-    const detailViewTopContainer = document.getElementById("detail-view-top-container");
+const detailView =  document.getElementById("detail-view");
+const detailViewTopContainer = document.getElementById("detail-view-top-container");
+const toggleScrollControl = (bodyControl = true)=>{
+    if (bodyControl) {
+        document.body.style.overflowY = "auto";
+        detailView.style.overflowY = "hidden";
+    } else {
+        document.body.style.overflowY = "hidden";
+        detailView.style.overflowY = "auto";
+    }
+}
+function addListenersToCards(){    
     const cards = document.querySelectorAll('.cr-card');
     cards.forEach(card => {
         card.addEventListener('click', (e)=>{
+            toggleScrollControl(false);
             detailView.classList.add("show");
             card.classList.add("selected");
             let img = document.createElement("img");
@@ -58,7 +68,7 @@ window.addEventListener('load', ()=>{
                 }
                 img.style.width = "300px";
                 img.style.height = "300px";
-                
+
             }, 200);
             setTimeout(() => {
                 placeholder.remove();
@@ -67,4 +77,6 @@ window.addEventListener('load', ()=>{
             }, 1200);
         });
     });
-});
+}
+toggleScrollControl();
+addListenersToCards();

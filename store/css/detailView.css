@@ -14,9 +14,17 @@
     margin-top: 20px;
     font-family: 'Comfortaa', cursive;
     width: calc(100% - 400px);
+    text-align: justify;
 }
 @media (max-width: 730px) {
     #detail-view-top-container .description {
         width: 100%;
     }
+}
+/* Detail close button position */
+#detail-close {
+    position: fixed;
+    top: 0px;
+    right: 0px;
+    margin: 20px;
 }
