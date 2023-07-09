@@ -14,7 +14,7 @@ function addListenersToCards(){
     cards.forEach(card => {
         card.addEventListener('click', (e)=>{
             toggleScrollControl(false);
-            detailView.classList.add("show");
+            toggleDetailView(true);
             card.classList.add("selected");
             let img = document.createElement("img");
             let detailImg = document.createElement("img");

@@ -14,6 +14,7 @@
     <link rel="stylesheet" href="css/CandyButtons/candyButtons.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
     <script defer src="bootstrap/js/bootstrap.bundle.js"></script>
+    <script async src="js/detailView.js"></script>
     <script async src="js/backgroundColor.js"></script>
     <script async src="js/cardClick.js"></script>
     <!-- Google fonts -->
@@ -62,7 +63,7 @@
         <button class="ripple btn-cr cr-posterior"><i class="bi bi-caret-right"></i></button>
     </carrousel>
     <div id="detail-view">
-        <button class="custom-btn btn-14" id="detail-close"><span><i class="bi bi-x-lg"></i> Cerrar</span></button>
+        <button class="custom-btn btn-14" id="detail-close" onclick="toggleDetailView(false)"><span><i class="bi bi-x-lg"></i> Cerrar</span></button>
         <div id="detail-view-top-container">
             <div class="description">
                 El nuevo sistema de mensajería que gira la tortilla. Privado, seguro y comodo, ¿qué más se puede pedir?

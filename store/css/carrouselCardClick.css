@@ -9,8 +9,6 @@ carrousel .cr-content .card.selected img {
     transform: translate(-50%, -50%);
     width: 0px;
     height: 0px;
-    padding: 0px;
-    opacity: 0;
     z-index: 20;
 }
 #detail-view.show {
@@ -19,7 +17,15 @@ carrousel .cr-content .card.selected img {
     animation-duration: 1.2s;
     animation-fill-mode: forwards;
     padding: 90px;
-    opacity: 1;
+}
+#detail-view.hide {
+    transition: 500ms padding;
+    animation-name: none;
+    animation-name: detailView;
+    animation-direction: reverse;
+    animation-duration: 1.2s;
+    animation-fill-mode: forwards;
+    padding: 0px;
 }
 @media (max-width: 500px) {
     #detail-view.show {
