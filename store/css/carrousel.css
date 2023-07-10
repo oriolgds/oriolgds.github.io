@@ -90,3 +90,7 @@ carrousel .cr-content .card:hover {
     -moz-box-shadow: 0 8px 10px 3px #272727;
     box-shadow: 0 8px 10px 3px #272727;
 }
+h3 {
+    color: #212121;
+    margin-left: 20px;
+}
