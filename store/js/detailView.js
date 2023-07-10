@@ -3,6 +3,7 @@ function toggleDetailView(open = false){
         detailView.classList.remove("hide");
         detailView.classList.remove("show");
         detailView.classList.add("show");
+        toggleScrollControl(false);
     }
     else {
         detailView.classList.add("hide");
@@ -11,6 +12,7 @@ function toggleDetailView(open = false){
             detailView.classList.remove("show");
             enableCards();
         }, 1200);
+        toggleScrollControl(true);
 
         
     }
