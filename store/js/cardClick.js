@@ -16,6 +16,9 @@ function addListenersToCards(){
             toggleScrollControl(false);
             toggleDetailView(true);
             card.classList.add("selected");
+            setTimeout(() => {
+                card.classList.remove("selected");
+            }, 1000);
             let img = document.createElement("img");
             let detailImg = document.createElement("img");
             let nodes = card.childNodes;

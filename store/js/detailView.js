@@ -6,5 +6,10 @@ function toggleDetailView(open = false){
     }
     else {
         detailView.classList.add("hide");
+        setTimeout(() => {
+            detailView.classList.remove("hide");
+            detailView.classList.remove("show");
+        }, 1200);
+        
     }
 }

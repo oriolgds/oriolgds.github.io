@@ -1,3 +1,6 @@
+carrousel .cr-content .card img {
+    opacity: 1;
+}
 carrousel .cr-content .card.selected img {
     opacity: 0;
 }
