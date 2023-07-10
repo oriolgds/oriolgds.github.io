@@ -9,7 +9,9 @@ function toggleDetailView(open = false){
         setTimeout(() => {
             detailView.classList.remove("hide");
             detailView.classList.remove("show");
+            enableCards();
         }, 1200);
+
         
     }
 }

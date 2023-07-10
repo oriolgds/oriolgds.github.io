@@ -9,10 +9,26 @@ const toggleScrollControl = (bodyControl = true)=>{
         detailView.style.overflowY = "auto";
     }
 }
+function disableCards(){
+    const cards = document.querySelectorAll('.cr-card');
+    cards.forEach(card => {
+        card.classList.add("disabled");
+    });
+}
+function enableCards(){
+    const cards = document.querySelectorAll('.cr-card');
+    cards.forEach(card => {
+        card.classList.remove("disabled");
+    });
+}
 function addListenersToCards(){    
     const cards = document.querySelectorAll('.cr-card');
     cards.forEach(card => {
         card.addEventListener('click', (e)=>{
+            if(card.classList.contains("disabled")){
+                return;
+            }
+            disableCards();
             toggleScrollControl(false);
             toggleDetailView(true);
             card.classList.add("selected");

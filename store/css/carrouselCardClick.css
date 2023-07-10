@@ -21,13 +21,15 @@ carrousel .cr-content .card.selected img {
     animation-duration: 1.2s;
     animation-fill-mode: forwards;
     padding: 90px;
+    opacity: 1;
 }
 #detail-view.show.hide {
-    transition: 500ms padding, 1.2s transform;
-    transition-delay: 1s, 0s;
+    transition: 1000ms padding, 1.2s transform, 1ms opacity;
+    transition-delay: 300ms, 0s, 1.2s;
     padding: 0px;
     bottom: 0px;
     transform: translate(-50%, 100%);
+    opacity: 0;
 }
 @media (max-width: 500px) {
     #detail-view.show {
