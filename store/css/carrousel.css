@@ -28,6 +28,7 @@ carrousel .cr-content {
     display: inline-flex;
     width: 100%;
     margin: 10px;
+    overflow-x: scroll;
 }
 
 /* Card styles */

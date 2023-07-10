@@ -7,6 +7,7 @@
 }
 #detail-view-top-container img.detail-view-img-logo {
     order: 1;
+    z-index: 1000;
 }
 #detail-view-top-container .description {
     order: 2;
@@ -27,4 +28,5 @@
     top: 0px;
     right: 0px;
     margin: 20px;
+    z-index: 2000;
 }
