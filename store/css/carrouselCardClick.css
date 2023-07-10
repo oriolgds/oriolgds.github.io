@@ -14,18 +14,14 @@ carrousel .cr-content .card.selected img {
 #detail-view.show {
     transition: 500ms padding;
     animation-name: detailView;
+    animation-direction: normal;
     animation-duration: 1.2s;
     animation-fill-mode: forwards;
     padding: 90px;
 }
 #detail-view.hide {
     transition: 500ms padding;
-    animation-name: none;
-    animation-name: detailView;
     animation-direction: reverse;
-    animation-duration: 1.2s;
-    animation-fill-mode: forwards;
-    padding: 0px;
 }
 @media (max-width: 500px) {
     #detail-view.show {
