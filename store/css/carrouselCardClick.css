@@ -19,9 +19,12 @@ carrousel .cr-content .card.selected img {
     animation-fill-mode: forwards;
     padding: 90px;
 }
-#detail-view.hide {
-    transition: 500ms padding;
-    animation-direction: reverse;
+#detail-view.show.hide {
+    transition: 500ms padding, 1.2s transform;
+    transition-delay: 1s, 0s;
+    padding: 0px;
+    bottom: 0px;
+    transform: translate(-50%, 100%);
 }
 @media (max-width: 500px) {
     #detail-view.show {
