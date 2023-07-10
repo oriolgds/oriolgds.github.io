@@ -12,7 +12,9 @@ function toggleDetailView(open = false){
             detailView.classList.remove("show");
             enableCards();
         }, 1200);
-        toggleScrollControl(true);
+        setTimeout(() => {
+            toggleScrollControl(true);
+        }, 1000);   
 
         
     }

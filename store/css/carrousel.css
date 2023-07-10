@@ -5,10 +5,14 @@ carrousel {
     display: flex;
     width: calc(100% - 40px);
     margin: 20px 20px;
-    height: 250px;
+    height: 260px;
     background-color: #212121;
     border-radius: 20px;
     padding: 0px 20px;
+}
+/* Button containers */
+carrousel .btn-cr-container .right {
+    width: 100px;
 }
 /* Button styles START */
 carrousel .cr-previous {
@@ -28,15 +32,18 @@ carrousel .cr-content {
     display: inline-flex;
     width: 100%;
     margin: 10px;
-    overflow-x: scroll;
+    overflow-x: auto;
 }
 
 /* Card styles */
 carrousel .cr-content .card {
     transition: 200ms all;
     position: relative;
-    height: 230px;
+    height: calc(100% - 5px);
     width: 190px;
+    min-width: 190px;
+    margin: 0px 10px;
+    margin-top: auto;
     border-radius: 25px;
     transform: translateY(0px);
     cursor: pointer;
