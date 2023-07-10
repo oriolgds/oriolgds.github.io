@@ -19,6 +19,10 @@ function addListenersToCards(){
             setTimeout(() => {
                 card.classList.remove("selected");
             }, 1000);
+            // Remove all the detail images
+            document.querySelectorAll(".detail-view-img-logo").forEach(element => {
+                element.remove();
+            });
             let img = document.createElement("img");
             let detailImg = document.createElement("img");
             let nodes = card.childNodes;
