@@ -14,8 +14,6 @@ function toggleDetailView(open = false){
         }, 1200);
         setTimeout(() => {
             toggleScrollControl(true);
-        }, 1000);   
-
-        
+        }, 1000);           
     }
 }

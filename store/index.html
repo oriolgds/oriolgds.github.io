@@ -18,8 +18,8 @@
     <script async src="js/detailView.js"></script>
     <script async src="js/backgroundColor.js"></script>
     <script async src="js/cardClick.js"></script>
-    <script defer src="js/carrouselButtons.js"></script>
-    
+    <script async src="js/detailViewContentManager.js"></script>
+    <script defer src="js/carrouselButtons.js"></script>    
     <!-- Google fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -31,7 +31,7 @@
             /* background-color: #e2e2e2; */
         }
     </style>
-    <style>
+    <style> 
         /* width */
         ::-webkit-scrollbar {
           width: 10px;
@@ -110,7 +110,14 @@
         <button class="custom-btn btn-14" id="detail-close" onclick="toggleDetailView(false)"><span><i class="bi bi-x-lg"></i> Cerrar</span></button>
         <div id="detail-view-top-container">
             <div class="description">
-                El nuevo sistema de mensajería que gira la tortilla. Privado, seguro y comodo, ¿qué más se puede pedir?
+                <div class="text">
+                    El nuevo sistema de mensajería que gira la tortilla. Privado, seguro y comodo, ¿qué más se puede pedir?
+                </div>                
+                <div id="download-buttons" class="row text-center mt-3">
+                    <button class="custom-btn btn-7 col"><span><i class="bi bi-android2 fs-3"></i></span></button>
+                    <button class="custom-btn btn-8 col"><i class="bi bi-globe2"></i></button>
+                    <button class="custom-btn btn-3 col"><span><i class="bi bi-windows"></i></span></button>
+                </div>
             </div>
         </div>
     </div>    

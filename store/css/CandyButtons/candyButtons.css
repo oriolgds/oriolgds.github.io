@@ -23,7 +23,8 @@ body {
     text-align: center;
   }
   button {
-    margin: 20px;
+    margin: 20px 5px;
+    max-height: 140px;
   }
   .custom-btn {
     width: 130px;
