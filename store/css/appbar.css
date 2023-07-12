@@ -20,8 +20,8 @@ appbar {
    animation-delay: 0s;
    animation-fill-mode: forwards;
 }
-.margin-top {
-    height: 160px;
+main {
+    margin-top: 160px;
 }
 @media (max-width: 560px) {
     appbar {
