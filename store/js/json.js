@@ -11,7 +11,7 @@ const data = [
                 "title": "Adventure Jam",
                 "imgSRC": "https://raw.githubusercontent.com/oriolgds/oriolgds.github.io/main/store/logos/Adventure%20Jam.png",
                 "imgALT": "Adventure Jam",
-                "description": "Adventure Jam es un juego creado y desarrollado por Oriol Giner Díaz. Con un diseño sencillo pero molón que te llevará a otra dimensión. Niveles únicos y inverosímiles. Cada nivel te llevará a un mundo completamente distinto. No espero ningún beneficio dando te este juego. Solo espero que lo disfrutes.",
+                "description": "Adventure Jam es un juego creado y desarrollado por Oriol Giner Díaz.<br>Con un diseño sencillo pero molón que te llevará a otra dimensión. Niveles únicos y inverosímiles.<br>Cada nivel te llevará a un mundo completamente distinto.<br><br> No espero ningún beneficio dando te este juego. Solo espero que lo disfrutes.",
                 "links": [
                     {
                         "type": "windows",
