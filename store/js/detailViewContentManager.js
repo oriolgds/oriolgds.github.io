@@ -7,16 +7,29 @@ const descriptionText = document.querySelector("#detail-view .description .text"
 const changeDescription = (text = "La descripción no está disponible")=>{
     descriptionText.textContent = text;
 }
-const displayNone = (element)=>{
-    element.classList.add("d-none");
+const changeHref = (element, value)=>{
+    element.parentElement.setAttribute("href", value);
+}
+const displayNone = (element, parent = false)=>{
+    if(parent){
+        element.parentElement.classList.add("d-none");
+    } 
+    else {
+        element.classList.add("d-none");
+    }    
 }
 const displayNoneR = (element)=>{
-    element.classList.remove("d-none");
+    if(parent){
+        element.parentElement.classList.remove("d-none");
+    } 
+    else {
+        element.classList.remove("d-none");
+    } 
 }
 const hideAllLinkButtons = ()=>{
-    displayNone(btnLinkAndroid);
-    displayNone(btnLinkWeb);
-    displayNone(btnLinkWindows);
-    displayNone(btnLinkExternal);
+    displayNone(btnLinkAndroid, true);
+    displayNone(btnLinkWeb, true);
+    displayNone(btnLinkWindows, true);
+    displayNone(btnLinkExternal, true);
 }
-
+hideAllLinkButtons();

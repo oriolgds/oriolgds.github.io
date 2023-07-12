@@ -26,8 +26,7 @@ body {
     margin: 20px 5px;
     max-height: 140px;
   }
-  .custom-btn {
-    width: 130px;
+  .custom-btn {    
     height: 40px;
     color: #fff;
     border-radius: 5px;
@@ -714,6 +713,7 @@ body {
     background: rgb(255,151,0);
     border: none;
     z-index: 1;
+    max-width: 200px;
   }
   .btn-14:after {
     position: absolute;
@@ -805,4 +805,8 @@ body {
   }
   .btn-16:active {
     top: 2px;
+  }
+  .custom-btn {
+    width: 100%;
+    min-width: 50px;
   }

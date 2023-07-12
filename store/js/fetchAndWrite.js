@@ -10,7 +10,7 @@ data.forEach(element => {
         let cardsHTML = ``;
         element.cards.forEach(card => {
             cardsHTML += `
-            <div class="card cr-card" links="${JSON.stringify(card.links)}">
+            <div class="card cr-card" ${("links=" + JSON.stringify(card.links)).replace(/\n/g, '')}>
                 <div class="title">${card.title}</div>
                 <img src="${card.imgSRC}" width="0" height="0" alt="${card.imgALT}" loading="lazy">
                 <div class="description">${card.description}</div>

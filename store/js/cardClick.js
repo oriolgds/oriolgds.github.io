@@ -22,8 +22,28 @@ function enableCards(){
     });
 }
 function updateDetailView(description = "", links = ""){
+    hideAllLinkButtons();
     changeDescription(description);
+    console.log(links);
     links = JSON.parse(links);
+    links.forEach(link => {
+        if(link.type == "web"){
+            displayNoneR(btnLinkWeb, true);
+            changeHref(btnLinkWeb, link.link);
+        } else if (link.type == "android"){
+            displayNoneR(btnLinkAndroid, true);
+            changeHref(btnLinkAndroid, link.link);
+        } else if (link.type == "external"){
+            displayNoneR(btnLinkExternal, true);
+            changeHref(btnLinkExternal, link.link);
+        } else if (link.type == "windows"){
+            displayNoneR(btnLinkWindows, true);
+            changeHref(btnLinkWindows, link.link);
+        }
+        else {
+            console.error("Wrong type in link button");
+        }
+    });
 }
 function addListenersToCards(){    
     const cards = document.querySelectorAll('.cr-card');

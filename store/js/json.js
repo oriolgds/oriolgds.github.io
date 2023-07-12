@@ -19,7 +19,15 @@ const data = [
                     {
                         "type": "external",
                         "link": "http://orschat.22web.org/share/"
-                    }
+                    }//,
+                    // {
+                    //     "type": "android",
+                    //     "link": "http://orschat.22web.org/"
+                    // },
+                    // {
+                    //     "type": "windows",
+                    //     "link": "http://orschat.22web.org/share/"
+                    // }
                 ]
             }
         ]
