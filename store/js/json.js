@@ -9,17 +9,17 @@ const data = [
         "cards": [
             {
                 "title": "Adventure Jam",
-                "imgSRC": "https://raw.githubusercontent.com/oriolgds/oriolgds.github.io/main/store/logos/Ors%20Chat.jpg",
-                "imgALT": "Ors Chat",
-                "description": "El nuevo sistema de mensajería que gira la tortilla. Privado, seguro y comodo, ¿qué más se puede pedir?",
+                "imgSRC": "https://raw.githubusercontent.com/oriolgds/oriolgds.github.io/main/store/logos/Adventure%20Jam.png",
+                "imgALT": "Adventure Jam",
+                "description": "Adventure Jam es un juego creado y desarrollado por Oriol Giner Díaz. Con un diseño sencillo pero molón que te llevará a otra dimensión. Niveles únicos y inverosímiles. Cada nivel te llevará a un mundo completamente distinto. No espero ningún beneficio dando te este juego. Solo espero que lo disfrutes.",
                 "links": [
                     {
-                        "type": "web",
-                        "link": "http://orschat.22web.org/"
+                        "type": "windows",
+                        "link": "https://raw.githubusercontent.com/oriolgds/Adventure-Jam-Release/9d4e9559ffb8b8e4f8c9b40daa5db4f485c4797a/Windows%20install/Adventure.exe"
                     },
                     {
                         "type": "external",
-                        "link": "http://orschat.22web.org/share/"
+                        "link": "http://adventurejam.22web.org/"
                     }//,
                     // {
                     //     "type": "android",
