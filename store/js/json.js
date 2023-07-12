@@ -110,6 +110,38 @@ const data = [
                         "link": "http://orsapps.22web.org"
                     }
                 ]
+            },
+            {
+                "title": "Ors Notes",
+                "imgSRC": "https://raw.githubusercontent.com/oriolgds/oriolgds.github.io/main/store/logos/Ors%20Notes.png",
+                "imgALT": "Ors Notes",
+                "description": "La aplicación más segura de internet que vas a encontrar para guardar tus notas. Además, sincroniza todas tus notas en todos los dispositivos que tengas abierta la misma cuenta.",
+                "links": [
+                    {
+                        "type": "web",
+                        "link": "http://orsnotes.22web.org/login.php"
+                    },
+                    {
+                        "type": "external",
+                        "link": "http://orsnotes.22web.org"
+                    }
+                ]
+            },
+            {
+                "title": "Ors Mail",
+                "imgSRC": "https://raw.githubusercontent.com/oriolgds/oriolgds.github.io/main/store/logos/Ors%20Mail.png",
+                "imgALT": "Ors Mail",
+                "description": "Ors mail te permite enviar correos anoninamente con total seguridad. Sin registrarse y sin tonterias",
+                "links": [
+                    {
+                        "type": "web",
+                        "link": "http://orsmail.22web.org/panel/"
+                    },
+                    {
+                        "type": "external",
+                        "link": "http://orsmail.22web.org"
+                    }
+                ]
             }
         ]
     },

@@ -24,7 +24,6 @@ function enableCards(){
 function updateDetailView(description = "", links = ""){
     hideAllLinkButtons();
     changeDescription(description);
-    console.log(links);
     links = JSON.parse(links);
     links.forEach(link => {
         if(link.type == "web"){
@@ -78,9 +77,7 @@ function addListenersToCards(){
                     detailImg.src = node.src;
                     const staticRect = node.getBoundingClientRect();
                     fixedPosition.top = staticRect.top;
-                    fixedPosition.left = staticRect.left;
-                    console.log('Top:', staticRect.top);
-                    console.log('Left:', staticRect.left);                    
+                    fixedPosition.left = staticRect.left;                  
                 }
             });
             img.width = "140";

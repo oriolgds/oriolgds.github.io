@@ -32,6 +32,5 @@ data.forEach(element => {
         html += carrouselHTML;
     }
 });
-console.log(html);
 main.innerHTML = html;
 addListenersToCards();
