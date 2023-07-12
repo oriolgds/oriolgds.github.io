@@ -21,6 +21,9 @@ function enableCards(){
         card.classList.remove("disabled");
     });
 }
+function updateDetailView(description = ""){
+    changeDescription(description)
+}
 function addListenersToCards(){    
     const cards = document.querySelectorAll('.cr-card');
     cards.forEach(card => {
@@ -31,6 +34,8 @@ function addListenersToCards(){
             disableCards();
             toggleScrollControl(false);
             toggleDetailView(true);
+            // Update the detail view information
+            updateDetailView(card.querySelector(".description").innerHTML);
             card.classList.add("selected");
             setTimeout(() => {
                 card.classList.remove("selected");
@@ -102,4 +107,3 @@ function addListenersToCards(){
     });
 }
 toggleScrollControl();
-addListenersToCards();
