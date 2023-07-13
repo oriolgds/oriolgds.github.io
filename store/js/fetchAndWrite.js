@@ -34,3 +34,4 @@ data.forEach(element => {
 });
 main.innerHTML = html;
 addListenersToCards();
+addCarrouselButtonsListeners();

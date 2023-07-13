@@ -27,8 +27,8 @@ main {
     appbar {
         height: 330px;
     }
-    .margin-top {
-        height: 360px;
+    main {
+        margin-top: 360px;
     }
 }
 appbarimg {

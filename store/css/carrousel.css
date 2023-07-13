@@ -34,6 +34,14 @@ carrousel .cr-posterior {
     right: 0px;
     transform: translateY(-50%);
 }
+@media (max-width: 450px) {
+    carrousel .cr-previous {
+        display: none;
+    }
+    carrousel .cr-posterior {
+        display: none;
+    }
+}
 /* Button styles END */
 
 
