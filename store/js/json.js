@@ -30,6 +30,30 @@ const data = [
                     //     "link": "http://orschat.22web.org/share/"
                     // }
                 ]
+            },
+            {
+                "title": "Ham Escape",
+                "imgSRC": "https://raw.githubusercontent.com/oriolgds/oriolgds.github.io/main/store/logos/Adventure%20Jam.png",
+                "imgALT": "Adventure Jam",
+                "description": "Adventure Jam es un juego creado y desarrollado por Oriol Giner Díaz.<br>Con un diseño sencillo pero molón que te llevará a otra dimensión. Niveles únicos y inverosímiles.<br>Cada nivel te llevará a un mundo completamente distinto.<br><br> No espero ningún beneficio dando te este juego. Solo espero que lo disfrutes.",
+                "links": [
+                    // {
+                    //     "type": "windows",
+                    //     "link": "https://raw.githubusercontent.com/oriolgds/Adventure-Jam-Release/9d4e9559ffb8b8e4f8c9b40daa5db4f485c4797a/Windows%20install/Adventure.exe"
+                    // },
+                    // {
+                    //     "type": "external",
+                    //     "link": "http://adventurejam.22web.org/"
+                    // }//,
+                    // // {
+                    // //     "type": "android",
+                    // //     "link": "http://orschat.22web.org/"
+                    // // },
+                    // // {
+                    // //     "type": "windows",
+                    // //     "link": "http://orschat.22web.org/share/"
+                    // // }
+                ]
             }
         ]
     },
