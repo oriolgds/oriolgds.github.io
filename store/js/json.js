@@ -33,9 +33,19 @@ const data = [
             },
             {
                 "title": "Ham Escape",
-                "imgSRC": "https://raw.githubusercontent.com/oriolgds/oriolgds.github.io/main/store/logos/Adventure%20Jam.png",
-                "imgALT": "Adventure Jam",
-                "description": "Adventure Jam es un juego creado y desarrollado por Oriol Giner Díaz.<br>Con un diseño sencillo pero molón que te llevará a otra dimensión. Niveles únicos y inverosímiles.<br>Cada nivel te llevará a un mundo completamente distinto.<br><br> No espero ningún beneficio dando te este juego. Solo espero que lo disfrutes.",
+                "imgSRC": "https://raw.githubusercontent.com/oriolgds/oriolgds.github.io/main/store/logos/Ham%20Escape.jpg",
+                "imgALT": "Ham Escape",
+                "description": `"Ham Escape" es un emocionante juego en 3D que te sumerge en un laberinto lleno de desafíos y enigmas. Eres un intrépido hámster que ha sido capturado y encerrado en un laberinto gigante. Ahora, tu misión es encontrar una salida segura y escapar de este desafiante y laberíntico mundo.<br>
+
+                Con gráficos vibrantes y una jugabilidad adictiva, "Ham Escape" te ofrece una experiencia emocionante. Explora cada rincón del laberinto, desde estrechos pasillos hasta amplias salas, mientras buscas pistas y desbloqueas nuevos caminos.<br>
+                
+                A medida que avanzas, te enfrentarás a diversos obstáculos que pondrán a prueba tus habilidades de agilidad y astucia. Evita trampas mortales, supera desafíos de saltos y resuelve acertijos ingeniosos para abrir puertas y desbloquear atajos que te acerquen a la libertad.<br>
+                
+                Además de la campaña principal, "Ham Escape" ofrece un modo multijugador donde puedes competir contra otros jugadores o unir fuerzas en emocionantes desafíos cooperativos. ¡Organiza carreras contra tus amigos para ver quién es el hámster más rápido en escapar del laberinto o únete a ellos para superar obstáculos en equipo!<br>
+                
+                El juego presenta una variedad de power-ups y objetos especiales que puedes recolectar a lo largo del laberinto. Estos elementos te otorgan habilidades únicas, como la capacidad de correr más rápido, saltar más alto o desbloquear accesos secretos, lo que te ayudará a encontrar la salida de manera más rápida y eficiente.<br>
+                
+                Con una mezcla de acción, exploración y desafíos lógicos, "Ham Escape" te mantendrá entretenido y cautivado mientras te sumerges en el trepidante mundo de un hámster decidido a escapar. ¿Estás listo para asumir el desafío y llevar a este pequeño héroe a la libertad? ¡El laberinto te espera, hamsterito valiente!`,
                 "links": [
                     // {
                     //     "type": "windows",

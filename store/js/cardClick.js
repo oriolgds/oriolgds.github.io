@@ -25,6 +25,13 @@ function updateDetailView(description = "", links = ""){
     hideAllLinkButtons();
     changeDescription(description);
     links = JSON.parse(links);
+    console.log(links.length);
+    if(links.length == 0){
+        document.getElementById("proximately-text").classList.remove("d-none");
+    }
+    else {
+        document.getElementById("proximately-text").classList.add("d-none");
+    }
     links.forEach(link => {
         if(link.type == "web"){
             displayNoneR(btnLinkWeb, true);

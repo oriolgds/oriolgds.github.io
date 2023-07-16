@@ -4,6 +4,7 @@ function toggleDetailView(open = false){
         detailView.classList.remove("show");
         detailView.classList.add("show");
         toggleScrollControl(false);
+        detailView.scrollTo(0, 0);
     }
     else {
         detailView.classList.add("hide");
