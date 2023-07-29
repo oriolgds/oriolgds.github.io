@@ -9,7 +9,7 @@ const data = [
         "cards": [
             {
                 "title": "Adventure Jam",
-                "imgSRC": "https://raw.githubusercontent.com/oriolgds/oriolgds.github.io/main/store/logos/Adventure%20Jam.png",
+                "imgSRC": "Adventure Jam.png",
                 "imgALT": "Adventure Jam",
                 "description": "Adventure Jam es un juego creado y desarrollado por Oriol Giner Díaz.<br>Con un diseño sencillo pero molón que te llevará a otra dimensión. Niveles únicos y inverosímiles.<br>Cada nivel te llevará a un mundo completamente distinto.<br><br> No espero ningún beneficio dando te este juego. Solo espero que lo disfrutes.",
                 "links": [
@@ -33,7 +33,7 @@ const data = [
             },
             {
                 "title": "Ham Escape",
-                "imgSRC": "https://raw.githubusercontent.com/oriolgds/oriolgds.github.io/main/store/logos/Ham%20Escape.jpg",
+                "imgSRC": "Ham Escape.jpg",
                 "imgALT": "Ham Escape",
                 "description": `"Ham Escape" es un emocionante juego en 3D que te sumerge en un laberinto lleno de desafíos y enigmas. Eres un intrépido hámster que ha sido capturado y encerrado en un laberinto gigante. Ahora, tu misión es encontrar una salida segura y escapar de este desafiante y laberíntico mundo.<br>
 
@@ -77,7 +77,7 @@ const data = [
         "cards": [
             {
                 "title": "Ors Chat",
-                "imgSRC": "https://raw.githubusercontent.com/oriolgds/oriolgds.github.io/main/store/logos/Ors%20Chat.jpg",
+                "imgSRC": "Ors Chat.jpg",
                 "imgALT": "Ors Chat",
                 "description": "El nuevo sistema de mensajería que gira la tortilla. Privado, seguro y comodo, ¿qué más se puede pedir?",
                 "links": [
@@ -111,7 +111,7 @@ const data = [
         "cards": [
             {
                 "title": "Ors Chat",
-                "imgSRC": "https://raw.githubusercontent.com/oriolgds/oriolgds.github.io/main/store/logos/Ors%20Chat.jpg",
+                "imgSRC": "Ors Chat.jpg",
                 "imgALT": "Ors Chat",
                 "description": "El nuevo sistema de mensajería que gira la tortilla. Privado, seguro y comodo, ¿qué más se puede pedir?",
                 "links": [
@@ -127,7 +127,7 @@ const data = [
             },
             {
                 "title": "Ors Apps",
-                "imgSRC": "https://raw.githubusercontent.com/oriolgds/oriolgds.github.io/main/store/logos/Ors%20Apps.png",
+                "imgSRC": "Ors Apps.png",
                 "imgALT": "Ors Apps",
                 "description": "La nueva caja de utilidades que gira la tortilla. Una aplicación de utilidades que hará más llevadero tu dia a dia",
                 "links": [
@@ -147,7 +147,7 @@ const data = [
             },
             {
                 "title": "Ors Notes",
-                "imgSRC": "https://raw.githubusercontent.com/oriolgds/oriolgds.github.io/main/store/logos/Ors%20Notes.png",
+                "imgSRC": "Ors Notes.png",
                 "imgALT": "Ors Notes",
                 "description": "La aplicación más segura de internet que vas a encontrar para guardar tus notas. Además, sincroniza todas tus notas en todos los dispositivos que tengas abierta la misma cuenta.",
                 "links": [
@@ -163,7 +163,7 @@ const data = [
             },
             {
                 "title": "Ors Mail",
-                "imgSRC": "https://raw.githubusercontent.com/oriolgds/oriolgds.github.io/main/store/logos/Ors%20Mail.png",
+                "imgSRC": "Ors Mail.png",
                 "imgALT": "Ors Mail",
                 "description": "Ors mail te permite enviar correos anoninamente con total seguridad. Sin registrarse y sin tonterias",
                 "links": [

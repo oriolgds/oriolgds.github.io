@@ -13,7 +13,7 @@ data.forEach(element => {
             <div class="card cr-card" ${("links=" + JSON.stringify(card.links)).replace(/\n/g, '')}>
                 <div class="title">${card.title}</div>
                 <img src="" alt="">
-                <img src="${card.imgSRC}" width="0" height="0" alt="${card.imgALT}" loading="lazy">
+                <img src="${"logos/" + card.imgSRC}" width="0" height="0" alt="${card.imgALT}" loading="lazy">
                 <div class="description">${card.description}</div>
             </div>`;
         });
