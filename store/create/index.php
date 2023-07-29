@@ -7,7 +7,7 @@ function checkUsernameExists($username, $database)
 {
   $query = "SELECT COUNT(`id`) AS `COUNT` FROM `users` WHERE `username` = '$username'";
   $sql = mysqli_query($database, $query);
-  $val = mysqli_fetch_array($sql);
+  $val = mysqli_fetch_array($sql)[0];
   return $val >= 1;
 }
 // When the user sends the form
@@ -28,6 +28,7 @@ if($_POST){
       // Insert the user in the database
       $query = "INSERT INTO `users` (`id`, `username`, `password`, `creationDate`, `gender`) VALUES (NULL, '$username', '$password', NOW(), '$gender');";
       mysqli_query($database, $query);
+      $alerts->add('Su cuenta se ha creado correctamente. <a href="../login" class="alert-link">Iniciar sesión</a>', "success");
     }
   }
 }
@@ -39,6 +40,7 @@ if($_POST){
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Crear cuenta</title>
     <link rel="stylesheet" href="../bootstrap/css/bootstrap.css">
+    <link rel="shortcut icon" href="../icon 64.png" type="image/x-icon">
   </head>
   <body class="d-flex align-items-center py-4 bg-body-tertiary container" style="max-width: 500px;">  
     <main class="form-signin w-100 m-auto">
@@ -50,7 +52,7 @@ if($_POST){
             <img class="mb-4 rounded" src="../icon.png" alt="" width="72" height="72">
             <h1 class="h3 mb-3 fw-normal">Necesitamos algunos datos para crear tu cuenta</h1>
             <div class="form-floating my-1">
-                <input type="text" class="form-control" id="inputUsername" placeholder="oriolgds" minlength="1" maxlength="30" required name="username">
+                <input type="text" class="form-control" id="inputUsername" placeholder="Nombre de usuario" minlength="1" maxlength="30" required name="username">
                 <label for="inputUsername">Nombre de usuario</label>
             </div>
             <div class="form-floating my-1">
@@ -83,6 +85,4 @@ if($_POST){
 
 
 
-
-  <script src="../bootstrap/js/bootstrap.bundle.js"></script>
 </html>
