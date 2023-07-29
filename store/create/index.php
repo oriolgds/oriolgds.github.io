@@ -27,6 +27,7 @@ if($_POST){
     else {
       // Insert the user in the database
       $query = "INSERT INTO `users` (`id`, `username`, `password`, `creationDate`, `gender`) VALUES (NULL, '$username', '$password', NOW(), '$gender');";
+      mysqli_query($database, $query);
     }
   }
 }
