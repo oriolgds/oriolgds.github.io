@@ -51,7 +51,7 @@ if($_POST){
       $alerts->eHtml();
       ?>
         <form method="post" autocomplete="off" autocapitalize="off">
-            <img class="mb-4 rounded" src="../icon.png" alt="" width="72" height="72">
+            <img class="mb-4 rounded" src="../icon.png" alt="" width="72" height="72" loading="lazy">
             <h1 class="h3 mb-3 fw-normal">Necesitamos algunos datos para crear tu cuenta</h1>
             <div class="form-floating my-1">
                 <input type="text" class="form-control" id="inputUsername" placeholder="Nombre de usuario" minlength="1" maxlength="30" required name="username" value="<?php echo $username; ?>">
@@ -78,8 +78,9 @@ if($_POST){
               <label class="form-check-label user-select-none" for="gender3">
                 Prefiero no decirlo
               </label>
-            </div>
-            <button class="btn btn-warning w-100 py-2 mt-3" type="submit">Crear</button>
+            </div>            
+            <button class="btn btn-warning w-100 py-2 my-3" type="submit">Crear</button>
+            <small class="text-muted">¿Ya tienes cuenta? Inicia sesión <a href="../login/" class="text-primary">aquí</a></small>
             <p class="mt-5 mb-3 text-body-secondary">© 2023</p>
         </form>
     </main>

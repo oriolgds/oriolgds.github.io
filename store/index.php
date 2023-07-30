@@ -1,3 +1,7 @@
+<?php
+require_once "valoration/userCorrect.php";
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -64,11 +68,26 @@
         <div class="title">Ors Store</div>
         <div class="phrases"></div>
     </appbar>
-    <nav class="text-end me-4">
-        <div class="btn-group text-end" role="group" aria-label="Sign in and sign up">
-            <a href="create/" type="button" class="btn btn-outline-warning m-0">Crear cuenta</a>
-            <a href="login/" type="button" class="btn btn-outline-primary m-0">Login</a>
-        </div>
+    <nav class="text-end me-4" style="align-content: center;">
+        <?php
+        if($userCorrect->check($_SESSION['username'], $_SESSION['password'])){
+            ?>
+            <button class="btn btn-secondary">Hola @<?php echo $_SESSION['username'];  ?>!</button>
+            <a href="logout/" type="button" class="btn btn-danger">Cerrar sesión</a>
+            <?php
+        }
+        else {
+            unset($_SESSION['username']);
+            unset($_SESSION['password']);
+            ?>
+            <div class="btn-group text-end" role="group" aria-label="Sign in and sign up">
+                <a href="create/" type="button" class="btn btn-outline-warning m-0">Crear cuenta</a>
+                <a href="login/" type="button" class="btn btn-outline-primary m-0">Login</a>
+            </div>
+            <?php
+        }
+        ?>
+        
     </nav>
     <main>
 
