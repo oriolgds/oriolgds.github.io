@@ -1,3 +1,26 @@
+<?php
+require_once "../valoration/database.php";
+require_once "../valoration/alerts.php";
+$alerts = new Alerts();
+if($_POST){
+  $username = $_POST['username'];
+  $password = $_POST['password'];
+  $query = 'SELECT COUNT(`id`) AS "COUNT" FROM `users` WHERE username = "$username" AND password = "$password"';
+  $sql = mysqli_query($database, $query);
+  $sql = mysqli_fetch_array($sql)[0];
+  // This means user exits
+  if(intval($sql) >= 1){
+    $_SESSION['username'] = $username;
+    $_SESSION['password'] = $password;    
+    header("Location: ../");
+    exit;
+  }
+  // This means password or username is incorrect
+  else {
+    $alerts->add("El usuario o la contraseña son <b>incorrectos</b>", "danger");
+  }
+}
+?>
 <!doctype html>
 <html lang="es">
   <head>
@@ -9,6 +32,9 @@
   </head>
   <body class="d-flex align-items-center py-4 bg-body-tertiary container" style="max-width: 500px;">  
     <main class="form-signin w-100 m-auto">
+      <?php
+      $alerts->eHtml();
+      ?>
       <form method="post" autocomplete="off" autocapitalize="off">
             <img class="mb-4 rounded" src="../icon.png" alt="" width="72" height="72">
             <h1 class="h3 mb-3 fw-normal">Introduce tus datos para iniciar sesión</h1>

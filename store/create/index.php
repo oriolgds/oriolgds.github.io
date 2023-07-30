@@ -1,5 +1,5 @@
 <?php
-require "../valoration/database.php";
+require_once "../valoration/database.php";
 require_once "../valoration/alerts.php";
 $alerts = new Alerts();
 
@@ -10,6 +10,8 @@ function checkUsernameExists($username, $database)
   $val = mysqli_fetch_array($sql)[0];
   return $val >= 1;
 }
+$username = "";
+$password = "";
 // When the user sends the form
 if($_POST){
   $username = $_POST['username'];
@@ -52,11 +54,11 @@ if($_POST){
             <img class="mb-4 rounded" src="../icon.png" alt="" width="72" height="72">
             <h1 class="h3 mb-3 fw-normal">Necesitamos algunos datos para crear tu cuenta</h1>
             <div class="form-floating my-1">
-                <input type="text" class="form-control" id="inputUsername" placeholder="Nombre de usuario" minlength="1" maxlength="30" required name="username">
+                <input type="text" class="form-control" id="inputUsername" placeholder="Nombre de usuario" minlength="1" maxlength="30" required name="username" value="<?php echo $username; ?>">
                 <label for="inputUsername">Nombre de usuario</label>
             </div>
             <div class="form-floating my-1">
-                <input type="password" class="form-control" id="inputPassword" placeholder="Password" minlength="6" maxlength="30" required name="password">
+                <input type="password" class="form-control" id="inputPassword" placeholder="Password" minlength="6" maxlength="30" required name="password" value="<?php echo $password; ?>">
                 <label for="inputPassword">Contraseña</label>
             </div>
             <div class="form-check">
