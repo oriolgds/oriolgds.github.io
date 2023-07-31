@@ -1,6 +1,7 @@
 <?php
 require_once "valoration/userCorrect.php";
 session_start();
+$userOK = false;
 ?>
 <!DOCTYPE html>
 <html lang="es">
@@ -71,6 +72,7 @@ session_start();
     <nav class="text-end me-4" style="align-content: center;">
         <?php
         if($userCorrect->check($_SESSION['username'], $_SESSION['password'])){
+            $userOK = true;
             ?>
             <button class="btn btn-secondary">Hola @<?php echo $_SESSION['username']; ?>!</button>
             <a href="logout/" type="button" class="btn btn-danger">Cerrar sesión</a>
@@ -154,6 +156,9 @@ session_start();
                     <a href="http://" target="_blank" rel="noopener noreferrer" class="col text-start"><button class="custom-btn btn-3" data-bs-toggle="tooltip" id="btn-link-windows" data-bs-title="Windows app"><span><i class="bi bi-windows"></i></span></button></a>
                     <a href="http://" target="_blank" rel="noopener noreferrer" class="col text-start"><button class="custom-btn btn-5" data-bs-toggle="tooltip" id="btn-link-external" data-bs-title="Ver la web del proyecto"><span><i class="bi bi-box-arrow-up-right"></i></span></button></a>
                 </section>
+                <?php
+                if($userOK){
+                ?>
                 <section id="valoration" class="mt-4 mx-0">
                     <h2>Calificaciones y opiniones</h2>
                     <button class="btn btn-primary" role="button" type="button">Escribir reseña</button>
@@ -162,6 +167,15 @@ session_start();
                         
                     </div>        
                 </section>
+                <?php } else { ?>
+                    <h2 class="mt-4 mx-0">Calificaciones y opiniones</h2>
+                    <small>Para poder acceder a las reseñas inicia sesión con una cuenta de Ors Store o crearte una</small>
+                    <br>
+                    <div class="text-center d-flex row mt-3" role="group" aria-label="Sign in and sign up">
+                        <a href="create/" type="button" class="btn btn-warning m-0 col mx-1">Crear cuenta</a>
+                        <a href="login/" type="button" class="btn btn-primary m-0 col mx-1">Login</a>
+                    </div>
+                <?php } ?>
             </div>
         </div>
     </div>  

@@ -139,7 +139,7 @@ const dataCards = {
             }
         ]
     }
-}
+};
 
 
 const data = [
@@ -180,4 +180,4 @@ const data = [
             dataCards[5],            
         ]
     },
-]
+];
