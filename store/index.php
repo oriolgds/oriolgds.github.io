@@ -156,6 +156,7 @@ session_start();
                 </section>
                 <section id="valoration" class="mt-4 mx-0">
                     <h2>Calificaciones y opiniones</h2>
+                    <button class="btn btn-primary" role="button" type="button">Escribir reseña</button>
                     <div id="valoration-bars">
                         <!-- Estrellas -->
                         
