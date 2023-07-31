@@ -72,7 +72,7 @@ session_start();
         <?php
         if($userCorrect->check($_SESSION['username'], $_SESSION['password'])){
             ?>
-            <button class="btn btn-secondary">Hola @<?php echo $_SESSION['username'];  ?>!</button>
+            <button class="btn btn-secondary">Hola @<?php echo $_SESSION['username']; ?>!</button>
             <a href="logout/" type="button" class="btn btn-danger">Cerrar sesión</a>
             <?php
         }
@@ -144,16 +144,23 @@ session_start();
         <button class="custom-btn btn-14" id="detail-close" onclick="toggleDetailView(false)"><span><i class="bi bi-x-lg"></i> Cerrar</span></button>
         <div id="detail-view-top-container">
             <div class="description">
-                <div class="text">
+                <section class="text">
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae nulla magnam odio asperiores quasi itaque nisi ut omnis! Reprehenderit facere porro accusamus odio nesciunt mollitia quo possimus cupiditate vero quod!
-                </div>                
-                <div id="download-buttons" class="row text-start mt-3">
+                </section>                
+                <section id="download-buttons" class="row text-start mt-3">
                     <div class="col text-center" id="proximately-text">Disponible proximamente</div>
                     <a href="http://" target="_blank" rel="noopener noreferrer" class="col text-start"><button class="custom-btn btn-7" data-bs-toggle="tooltip" id="btn-link-android" data-bs-title="Android app"><span><i class="bi bi-android2 fs-3"></i></span></button></a>
                     <a href="http://" target="_blank" rel="noopener noreferrer" class="col text-start"><button class="custom-btn btn-8" data-bs-toggle="tooltip" id="btn-link-web" data-bs-title="Web"><span><i class="bi bi-globe2"></i></span></button></a>
                     <a href="http://" target="_blank" rel="noopener noreferrer" class="col text-start"><button class="custom-btn btn-3" data-bs-toggle="tooltip" id="btn-link-windows" data-bs-title="Windows app"><span><i class="bi bi-windows"></i></span></button></a>
                     <a href="http://" target="_blank" rel="noopener noreferrer" class="col text-start"><button class="custom-btn btn-5" data-bs-toggle="tooltip" id="btn-link-external" data-bs-title="Ver la web del proyecto"><span><i class="bi bi-box-arrow-up-right"></i></span></button></a>
-                </div>
+                </section>
+                <section id="valoration" class="mt-4 mx-0">
+                    <h2>Calificaciones y opiniones</h2>
+                    <div id="valoration-bars">
+                        <!-- Estrellas -->
+                        
+                    </div>        
+                </section>
             </div>
         </div>
     </div>  
@@ -173,5 +180,6 @@ session_start();
     <script src="js/carrouselButtons.js"></script>    
     <script src="js/fetchAndWrite.js"></script>
     <script src="js/backgroundColor.js"></script>
+    <script src="js/valorationFetch.js"></script>
 </body>
 </html>

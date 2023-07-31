@@ -8,7 +8,7 @@
 	<url>
 		<loc>http://www.oriol.22web.org/store</loc>
 		<priority>0.80</priority>
-		<lastmod>2023-07-30</lastmod>
+		<lastmod>2023-07-31</lastmod>
 	</url>
 	<url>
 		<loc>http://www.oriol.22web.org/error</loc>
@@ -29,5 +29,10 @@
 		<loc>http://www.oriol.22web.org/store/create</loc>
 		<priority>0.60</priority>
 		<lastmod>2023-07-30</lastmod>
+	</url>
+	<url>
+		<loc>http://www.oriol.22web.org/store/valoration/fetchValoration.php</loc>
+		<priority>0.00</priority>
+		<lastmod>2023-07-31</lastmod>
 	</url>
 </urlset>

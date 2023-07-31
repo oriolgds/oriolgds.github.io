@@ -8,6 +8,8 @@
 #detail-view-top-container img.detail-view-img-logo {
     order: 1;
     z-index: 1000;
+    position: sticky;
+    top: 0;
 }
 #detail-view-top-container .description {
     order: 2;
@@ -20,6 +22,9 @@
 @media (max-width: 730px) {
     #detail-view-top-container .description {
         width: 100%;
+    }
+    #detail-view-top-container img.detail-view-img-logo {
+        position: initial;
     }
 }
 /* Detail close button position */
