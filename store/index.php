@@ -17,6 +17,7 @@ $userOK = false;
     <link rel="stylesheet" href="css/carrousel.css">
     <link rel="stylesheet" href="css/carrouselCardClick.css">
     <link rel="stylesheet" href="css/detailView.css">
+    <link rel="stylesheet" href="css/writeValoration.css">
     <link rel="stylesheet" href="css/CandyButtons/candyButtons.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
     
@@ -161,7 +162,10 @@ $userOK = false;
                 ?>
                 <section id="valoration" class="mt-4 mx-0">
                     <h2>Calificaciones y opiniones</h2>
-                    <button class="btn btn-primary" role="button" type="button">Escribir reseña</button>
+                    <button class="btn btn-primary" id="add-valoration-btn" role="button" type="button">Escribir reseña</button>
+                    <div id="write-valoration">
+
+                    </div>
                     <div id="valoration-bars">
                         <!-- Estrellas -->
                         
@@ -196,5 +200,6 @@ $userOK = false;
     <script src="js/fetchAndWrite.js"></script>
     <script src="js/backgroundColor.js"></script>
     <script src="js/valorationFetch.js"></script>
+    <script src="js/writeValoration.js"></script>
 </body>
 </html>

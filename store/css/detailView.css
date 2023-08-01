@@ -9,7 +9,7 @@
     order: 1;
     z-index: 1000;
     position: sticky;
-    top: 0;
+    top: -50px;
 }
 #detail-view-top-container .description {
     order: 2;
