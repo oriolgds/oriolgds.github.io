@@ -19,7 +19,7 @@ function createBars(values = [0, 0, 0, 0, 0]){
         <div class="stars me-2" style="min-width: 40px;">
             ${i}
         </div>
-        <div class="progress w-100 rounded-5" role="progressbar" aria-label="Basic example" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
+        <div class="progress w-100 rounded-5" role="progressbar" aria-label="Basic example" aria-valuenow="${percent}" aria-valuemin="0" aria-valuemax="100">
             <div class="progress-bar" style="width: ${percent}"></div>
         </div>
     </div>`

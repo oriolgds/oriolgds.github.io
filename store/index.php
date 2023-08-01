@@ -162,7 +162,7 @@ $userOK = false;
                 ?>
                 <section id="valoration" class="mt-4 mx-0">
                     <h2>Calificaciones y opiniones</h2>
-                    <button class="btn btn-primary" id="add-valoration-btn" role="button" type="button">Escribir reseña</button>
+                    <button class="btn btn-primary" id="add-valoration-btn" role="button" type="button" data-bs-toggle="tooltip" data-bs-title="Escribir reseña" onclick="toggleDetailView(false)"><i class="bi bi-pencil-square"></i></button>
                     
                     <div id="valoration-bars">
                         <!-- Estrellas -->
@@ -181,7 +181,7 @@ $userOK = false;
             </div>
         </div>
     </div>
-    <div id="write-valoration" class="show">
+    <div id="write-valoration">
         <h2 class="display-2 text-break">Reseña de <span class="title">Adventure Jam</span></h2>
         <form action="" method="post">
             <div class="mb-3">
@@ -211,5 +211,8 @@ $userOK = false;
     <script src="js/backgroundColor.js"></script>
     <script src="js/valorationFetch.js"></script>
     <script src="js/writeValoration.js"></script>
+    <script>
+        window.scrollTo(0,0);
+    </script>
 </body>
 </html>

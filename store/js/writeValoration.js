@@ -1,6 +1,6 @@
 let stars = 5;
 
-const writeValorationContainer = document.getElementById("write-valoration");
+
 const writeValorationBtn = document.getElementById("add-valoration-btn");
 const starsValoration = document.getElementById("stars-valoration");
 
@@ -16,6 +16,11 @@ const changeStars = (n = 5)=>{
             <i class="bi bi-star${fill}"></i>
         </div>`;
     }
-    console.log(stars);
+    console.log("Stars" + stars);
 }
 changeStars(5);
+
+writeValorationBtn.addEventListener('click', ()=>{
+    
+    toggleWriteValorationView(true);
+});

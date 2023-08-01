@@ -18,3 +18,27 @@ function toggleDetailView(open = false){
         }, 1000);           
     }
 }
+
+function toggleWriteValorationView(open = false){
+    if(open){
+        writeValorationContainer.classList.remove("hide");
+        writeValorationContainer.classList.remove("show");
+        writeValorationContainer.classList.add("show");
+        
+        writeValorationContainer.scrollTo(0, 0);
+        setTimeout(() => {
+            toggleScrollControl(false, true);
+        }, 1001);
+    }
+    else {
+        writeValorationContainer.classList.add("hide");
+        setTimeout(() => {
+            writeValorationContainer.classList.remove("hide");
+            writeValorationContainer.classList.remove("show");
+            enableCards();
+        }, 1200);
+        setTimeout(() => {
+            toggleScrollControl(true);
+        }, 1000);           
+    }
+}

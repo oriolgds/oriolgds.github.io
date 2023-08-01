@@ -1,12 +1,20 @@
 const detailView =  document.getElementById("detail-view");
+const writeValorationContainer = document.getElementById("write-valoration");
 const detailViewTopContainer = document.getElementById("detail-view-top-container");
-const toggleScrollControl = (bodyControl = true)=>{
+const toggleScrollControl = (bodyControl = true, valorationControl = false)=>{
     if (bodyControl) {
         document.body.style.overflowY = "auto";
         detailView.style.overflowY = "hidden";
+        writeValorationContainer.style.overflowY = "hidden";
     } else {
         document.body.style.overflowY = "hidden";
         detailView.style.overflowY = "auto";
+        writeValorationContainer.style.overflowY = "hidden";
+    }
+    if(valorationControl){
+        document.body.style.overflowY = "hidden";
+        detailView.style.overflowY = "hidden";
+        writeValorationContainer.style.overflowY = "auto";
     }
 }
 function disableCards(){
