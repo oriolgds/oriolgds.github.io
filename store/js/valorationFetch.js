@@ -26,4 +26,7 @@ function createBars(values = [0, 0, 0, 0, 0]){
 
     }
 }
-createBars([20, 0, 5, 0, 17]);
+if(valorationBars !== null){
+    createBars([20, 0, 5, 0, 17]);
+}
+

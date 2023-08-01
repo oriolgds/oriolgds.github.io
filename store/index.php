@@ -163,9 +163,7 @@ $userOK = false;
                 <section id="valoration" class="mt-4 mx-0">
                     <h2>Calificaciones y opiniones</h2>
                     <button class="btn btn-primary" id="add-valoration-btn" role="button" type="button">Escribir reseña</button>
-                    <div id="write-valoration">
-
-                    </div>
+                    
                     <div id="valoration-bars">
                         <!-- Estrellas -->
                         
@@ -182,7 +180,19 @@ $userOK = false;
                 <?php } ?>
             </div>
         </div>
-    </div>  
+    </div>
+    <div id="write-valoration" class="show">
+        <h2 class="display-2 text-break">Reseña de <span class="title">Adventure Jam</span></h2>
+        <form action="" method="post">
+            <div class="mb-3">
+                <div class="d-flex" id="stars-valoration" style="flex-wrap: wrap;">
+                    
+                </div>
+                <label for="valoration-observations" class="form-label">¿Algo más que añadir?</label>
+                <textarea class="form-control" id="valoration-observations" style="height: 200px;"></textarea>
+            </div>
+        </form>
+    </div>
     <script src="bootstrap/js/bootstrap.bundle.js"></script>
     <script>
         function enableTooltips(){
