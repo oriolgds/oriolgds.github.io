@@ -20,7 +20,9 @@ const changeStars = (n = 5)=>{
 }
 changeStars(5);
 
-writeValorationBtn.addEventListener('click', ()=>{
+if(writeValorationBtn !== null){
+    writeValorationBtn.addEventListener('click', ()=>{
     
-    toggleWriteValorationView(true);
-});
+        toggleWriteValorationView(true);
+    });
+}
