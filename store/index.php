@@ -162,7 +162,7 @@ $userOK = false;
                 ?>
                 <section id="valoration" class="mt-4 mx-0">
                     <h2>Calificaciones y opiniones</h2>
-                    <button class="btn btn-primary" id="add-valoration-btn" role="button" type="button" data-bs-toggle="tooltip" data-bs-title="Escribir reseña" onclick="toggleDetailView(false)"><i class="bi bi-pencil-square"></i></button>
+                    <button class="btn btn-primary" id="add-valoration-btn" role="button" type="button" onclick="toggleDetailView(false)"><i class="bi bi-pencil-square"></i> Escribir reseña</button>
                     
                     <div id="valoration-bars">
                         <!-- Estrellas -->
@@ -190,8 +190,8 @@ $userOK = false;
                 </div>
                 <label for="valoration-observations" class="form-label">¿Algo más que añadir? ¿Detalles?</label>
                 <textarea class="form-control" id="valoration-observations" style="height: 200px;"></textarea>
-                <button type="button" class="btn btn-danger" data-bs-toggle="tooltip" data-bs-title="Cerrar" onclick="toggleWriteValorationView(false);"><i class="bi bi-box-arrow-left"></i></button>
-                <button type="button" class="btn btn-success" data-bs-toggle="tooltip" data-bs-title="Publicar"><i class="bi bi-send"></i></button>                
+                <button type="button" class="btn btn-danger" onclick="toggleWriteValorationView(false);"><i class="bi bi-box-arrow-left"></i> Cerrar</button>
+                <button type="button" class="btn btn-success"><i class="bi bi-send"></i> Publicar</button>                
             </div>
         </form>
     </div>
