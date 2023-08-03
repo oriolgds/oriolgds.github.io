@@ -183,15 +183,15 @@ $userOK = false;
     </div>
     <div id="write-valoration">
         <h2 class="display-2 text-break">Reseña de <span class="title">Adventure Jam</span></h2>
-        <form action="" method="post">
+        <form action="" method="POST" id="send-valoration-form">
             <div class="mb-3">
                 <div class="d-flex" id="stars-valoration" style="flex-wrap: wrap;">
                     
                 </div>
                 <label for="valoration-observations" class="form-label">¿Algo más que añadir? ¿Detalles?</label>
                 <textarea class="form-control" id="valoration-observations" style="height: 200px;"></textarea>
-                <button type="button" class="btn btn-danger" onclick="toggleWriteValorationView(false);"><i class="bi bi-box-arrow-left"></i> Cerrar</button>
-                <button type="button" class="btn btn-success"><i class="bi bi-send"></i> Publicar</button>                
+                <button type="button" class="btn btn-danger" id="btn-close-valoration"><i class="bi bi-box-arrow-left"></i> Cerrar</button>
+                <button type="submit" class="btn btn-success"><i class="bi bi-send"></i> Publicar</button>                
             </div>
         </form>
     </div>

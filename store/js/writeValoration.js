@@ -4,7 +4,7 @@ let stars = 5;
 const writeValorationBtn = document.getElementById("add-valoration-btn");
 const starsValoration = document.getElementById("stars-valoration");
 const valorationObservations = document.getElementById("valoration-observations");
-
+const sendValorationForm = document.getElementById("send-valoration-form");
 
 const changeStars = (n = 5)=>{
     stars = n;
@@ -28,8 +28,27 @@ if(writeValorationBtn !== null){
 }
 
 function sendValoration(){
-    cardIdPressed;
-    stars;
-    valorationObservations.value;
+    $.ajax({
+        type: "POST",
+        url: "valoration/insertValoration.php",
+        data: {
+            "projectID": cardIdPressed,
+            "stars": stars,
+            "observations": valorationObservations.value
+        },
+        success: function (response) {
+            console.log("Insert valoration response: " + response);
+        }
+    });
 
 }
+sendValorationForm.addEventListener('submit', (e)=>{
+    sendValoration();
+    e.preventDefault();
+    
+});
+document.getElementById("btn-close-valoration").addEventListener('click', ()=>{
+    toggleWriteValorationView(false);
+    sendValorationForm.reset();
+    changeStars(5);
+});
