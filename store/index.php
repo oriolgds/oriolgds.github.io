@@ -117,15 +117,17 @@ $userOK = false;
                 ?>
                 <section id="valoration" class="mt-4 mx-0">
                     <h2>Calificaciones y opiniones</h2>
-                    <button class="btn btn-primary" id="add-valoration-btn" role="button" type="button" onclick="toggleDetailView(false)"><i class="bi bi-pencil-square"></i> Escribir reseña</button>
-                    
+                    <button class="btn btn-primary mb-3" id="add-valoration-btn" role="button" type="button" onclick="toggleDetailView(false)"><i class="bi bi-pencil-square"></i> Escribir reseña</button>
+                    <h3 class="ms-0 my-3"><span id="stars-avg"></span><i class="bi bi-star ms-2"></i></h3>
                     <div id="valoration-bars">
                         <!-- Estrellas -->
                         
                     </div>  
                     
                     <article id="valorations-display">
-                        
+                        <div class="container text-center">
+                            <button type="button" class="btn btn-secondary"><i class="bi bi-arrow-down-short"></i> Cargar más <i class="bi bi-arrow-down-short"></i></button>
+                        </div>                        
                     </article>
                 </section>
                 <?php } else { ?>
@@ -168,7 +170,7 @@ $userOK = false;
     <script src="js/carrouselButtons.js"></script>    
     <script src="js/fetchAndWrite.js"></script>
     <script src="js/backgroundColor.js"></script>
-    <script src="js/valora tionFetch.js"></script>
+    <script src="js/valorationFetch.js"></script>
     <script src="js/writeValorationContentManager.js"></script>
     <script src="js/writeValoration.js"></script>
     <script>

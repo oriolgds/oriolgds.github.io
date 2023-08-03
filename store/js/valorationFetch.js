@@ -1,5 +1,8 @@
 const valorationBars = document.getElementById("valoration-bars");
-
+const starsAvg = document.getElementById("stars-avg");
+function roundToOneDecimal(number) {
+    return Number(number.toFixed(1));
+}
 function createBars(values = [0, 0, 0, 0, 0]){
     valorationBars.innerHTML = "";
     let total = 0;
@@ -30,6 +33,37 @@ if(valorationBars !== null){
     createBars([20, 0, 5, 0, 17]);
 }
 function fetchValorations(projectID){
-
+    // Reset all values
+    starsAvg.innerHTML = "--";
+    createBars();
+    // Fetch the star average    
+    $.ajax({
+        type: "GET",
+        url: "valoration/fetchStars.php",
+        data: {
+            'projectID': projectID,
+            "avg": "true"
+        },
+        success: function (response) {
+            if(isNaN(parseFloat(response))){
+                starsAvg.innerHTML = "--";
+            }
+            else {
+                starsAvg.innerHTML = roundToOneDecimal(parseFloat(response));
+            }            
+        }
+    });
+    $.ajax({
+        type: "GET",
+        url: "valoration/fetchStars.php",
+        data: {
+            'projectID': projectID,
+            "avg": "false"
+        },
+        success: function (response) {
+            console.log("Bars response" + response);
+            createBars(JSON.parse(response));
+        }
+    });
 }
 

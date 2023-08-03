@@ -37,8 +37,6 @@ function toggleWriteValorationView(open = false){
             writeValorationContainer.classList.remove("show");
             enableCards();
         }, 1200);
-        setTimeout(() => {
-            toggleScrollControl(true);
-        }, 1000);           
+        toggleScrollControl(true);
     }
 }
