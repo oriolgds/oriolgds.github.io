@@ -97,52 +97,7 @@ $userOK = false;
     </main>
 
 
-    <!-- <h3>Para comunicarse</h3>
-    <carrousel>
-        <div class="btn-cr-container left">
-            <button class="ripple btn-cr cr-previous"><i class="bi bi-caret-left"></i></button>
-        </div>        
-        <div class="cr-content">
-            <div class="card cr-card">
-                <div class="title">Ors Chat</div>
-                <img src="logos/Ors Chat.jpg" width="0" height="0" alt="Ors Chat" loading="lazy">
-                <div class="description">Un sistema de mensajeria privado, revolucionario y seguro en el que puedes confiar</div>
-            </div>
-            <div class="card cr-card">
-                <div class="title">Ors Chat</div>
-                <img src="logos/Ors Chat.jpg" width="0" height="0" alt="Ors Chat">
-                <div class="description">Un sistema de mensajeria privado, revolucionario y seguro en el que puedes confiar</div>
-            </div>
-            <div class="card cr-card">
-                <div class="title">Ors Chat</div>
-                <img src="logos/Ors Chat.jpg" width="0" height="0" alt="Ors Chat">
-                <div class="description">Un sistema de mensajeria privado, revolucionario y seguro en el que puedes confiar</div>
-            </div>
-            <div class="card cr-card">
-                <div class="title">Ors Chat</div>
-                <img src="logos/Ors Chat.jpg" width="0" height="0" alt="Ors Chat">
-                <div class="description">Un sistema de mensajeria privado, revolucionario y seguro en el que puedes confiar</div>
-            </div>
-            <div class="card cr-card">
-                <div class="title">Ors Chat</div>
-                <img src="logos/Ors Chat.jpg" width="0" height="0" alt="Ors Chat">
-                <div class="description">Un sistema de mensajeria privado, revolucionario y seguro en el que puedes confiar</div>
-            </div>
-            <div class="card cr-card">
-                <div class="title">Ors Chat</div>
-                <img src="logos/Ors Chat.jpg" width="0" height="0" alt="Ors Chat">
-                <div class="description">Un sistema de mensajeria privado, revolucionario y seguro en el que puedes confiar</div>
-            </div>
-            <div class="card cr-card">
-                <div class="title">Ors Chat</div>
-                <img src="logos/Ors Chat.jpg" width="0" height="0" alt="Ors Chat">
-                <div class="description">Un sistema de mensajeria privado, revolucionario y seguro en el que puedes confiar</div>
-            </div>
-        </div>
-        <div class="btn-cr-container right">
-            <button class="ripple btn-cr cr-posterior"><i class="bi bi-caret-right"></i></button>
-        </div>
-    </carrousel> -->
+    
     <div id="detail-view">
         <button class="custom-btn btn-14" id="detail-close" onclick="toggleDetailView(false)"><span><i class="bi bi-x-lg"></i> Cerrar</span></button>
         <div id="detail-view-top-container">
@@ -219,3 +174,51 @@ $userOK = false;
     </script>
 </body>
 </html>
+
+
+<!-- <h3>Para comunicarse</h3>
+    <carrousel>
+        <div class="btn-cr-container left">
+            <button class="ripple btn-cr cr-previous"><i class="bi bi-caret-left"></i></button>
+        </div>        
+        <div class="cr-content">
+            <div class="card cr-card">
+                <div class="title">Ors Chat</div>
+                <img src="logos/Ors Chat.jpg" width="0" height="0" alt="Ors Chat" loading="lazy">
+                <div class="description">Un sistema de mensajeria privado, revolucionario y seguro en el que puedes confiar</div>
+            </div>
+            <div class="card cr-card">
+                <div class="title">Ors Chat</div>
+                <img src="logos/Ors Chat.jpg" width="0" height="0" alt="Ors Chat">
+                <div class="description">Un sistema de mensajeria privado, revolucionario y seguro en el que puedes confiar</div>
+            </div>
+            <div class="card cr-card">
+                <div class="title">Ors Chat</div>
+                <img src="logos/Ors Chat.jpg" width="0" height="0" alt="Ors Chat">
+                <div class="description">Un sistema de mensajeria privado, revolucionario y seguro en el que puedes confiar</div>
+            </div>
+            <div class="card cr-card">
+                <div class="title">Ors Chat</div>
+                <img src="logos/Ors Chat.jpg" width="0" height="0" alt="Ors Chat">
+                <div class="description">Un sistema de mensajeria privado, revolucionario y seguro en el que puedes confiar</div>
+            </div>
+            <div class="card cr-card">
+                <div class="title">Ors Chat</div>
+                <img src="logos/Ors Chat.jpg" width="0" height="0" alt="Ors Chat">
+                <div class="description">Un sistema de mensajeria privado, revolucionario y seguro en el que puedes confiar</div>
+            </div>
+            <div class="card cr-card">
+                <div class="title">Ors Chat</div>
+                <img src="logos/Ors Chat.jpg" width="0" height="0" alt="Ors Chat">
+                <div class="description">Un sistema de mensajeria privado, revolucionario y seguro en el que puedes confiar</div>
+            </div>
+            <div class="card cr-card">
+                <div class="title">Ors Chat</div>
+                <img src="logos/Ors Chat.jpg" width="0" height="0" alt="Ors Chat">
+                <div class="description">Un sistema de mensajeria privado, revolucionario y seguro en el que puedes confiar</div>
+            </div>
+        </div>
+        <div class="btn-cr-container right">
+            <button class="ripple btn-cr cr-posterior"><i class="bi bi-caret-right"></i></button>
+        </div>
+    </carrousel> -->
