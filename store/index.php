@@ -122,10 +122,14 @@ $userOK = false;
                     <div id="valoration-bars">
                         <!-- Estrellas -->
                         
-                    </div>        
+                    </div>  
+                    
+                    <article id="valorations-display">
+                        
+                    </article>
                 </section>
                 <?php } else { ?>
-                    <h2 class="mt-4 mx-0">Calificaciones y opiniones</h2>
+                    <h2 class="mt-4 mx-0 text-start">Calificaciones y opiniones</h2>
                     <small>Para poder acceder a las reseñas inicia sesión con una cuenta de Ors Store o crearte una</small>
                     <br>
                     <div class="text-center d-flex row mt-3" role="group" aria-label="Sign in and sign up">
@@ -140,9 +144,7 @@ $userOK = false;
         <h2 class="display-2 text-break">Reseña de <span class="title">Adventure Jam</span></h2>
         <form action="" method="POST" id="send-valoration-form">
             <div class="mb-3">
-                <div class="d-flex" id="stars-valoration" style="flex-wrap: wrap;">
-                    
-                </div>
+                <div class="d-flex" id="stars-valoration" style="flex-wrap: wrap;"></div>
                 <label for="valoration-observations" class="form-label">¿Algo más que añadir? ¿Detalles?</label>
                 <textarea class="form-control" id="valoration-observations" style="height: 200px;"></textarea>
                 <button type="button" class="btn btn-danger" id="btn-close-valoration"><i class="bi bi-box-arrow-left"></i> Cerrar</button>
@@ -166,7 +168,7 @@ $userOK = false;
     <script src="js/carrouselButtons.js"></script>    
     <script src="js/fetchAndWrite.js"></script>
     <script src="js/backgroundColor.js"></script>
-    <script src="js/valorationFetch.js"></script>
+    <script src="js/valora tionFetch.js"></script>
     <script src="js/writeValorationContentManager.js"></script>
     <script src="js/writeValoration.js"></script>
     <script>

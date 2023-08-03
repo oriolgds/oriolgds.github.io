@@ -73,6 +73,7 @@ function addListenersToCards(){
             disableCards();
             toggleScrollControl(false);
             toggleDetailView(true);
+            fetchValorations(cardIdPressed);
             // Update the detail view information
             updateDetailView(card.querySelector(".description").innerHTML, card.getAttribute("links"));
             card.classList.add("selected");

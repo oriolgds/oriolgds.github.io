@@ -22,11 +22,14 @@ function createBars(values = [0, 0, 0, 0, 0]){
         <div class="progress w-100 rounded-5" role="progressbar" aria-label="Basic example" aria-valuenow="${percent}" aria-valuemin="0" aria-valuemax="100">
             <div class="progress-bar" style="width: ${percent}"></div>
         </div>
-    </div>`
+    </div>`;
 
     }
 }
 if(valorationBars !== null){
     createBars([20, 0, 5, 0, 17]);
+}
+function fetchValorations(projectID){
+
 }
 

@@ -27,7 +27,11 @@ if(writeValorationBtn !== null){
     });
 }
 
-function sendValoration(){
+
+
+sendValorationForm.addEventListener('submit', (e)=>{
+    e.submitter.innerHTML = `<div class="spinner-border spinner-border-sm" role="status"><span class="visually-hidden">Cargando...</span></div>`;    
+    e.submitter.setAttribute("disabled", "true");
     $.ajax({
         type: "POST",
         url: "valoration/insertValoration.php",
@@ -38,17 +42,21 @@ function sendValoration(){
         },
         success: function (response) {
             console.log("Insert valoration response: " + response);
+            e.submitter.innerHTML = `¡Publicado!`;
+            setTimeout(() => {
+                e.submitter.innerHTML = `<i class="bi bi-send"></i> Publicar`;
+                e.submitter.removeAttribute("disabled");
+                closeValorationView();
+            }, 1500);            
         }
-    });
-
-}
-sendValorationForm.addEventListener('submit', (e)=>{
-    sendValoration();
-    e.preventDefault();
-    
+    });  
+    e.preventDefault();  
 });
-document.getElementById("btn-close-valoration").addEventListener('click', ()=>{
+function closeValorationView(){
     toggleWriteValorationView(false);
     sendValorationForm.reset();
     changeStars(5);
+}
+document.getElementById("btn-close-valoration").addEventListener('click', ()=>{
+    closeValorationView();
 });
