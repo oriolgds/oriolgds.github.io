@@ -3,7 +3,7 @@ let stars = 5;
 
 const writeValorationBtn = document.getElementById("add-valoration-btn");
 const starsValoration = document.getElementById("stars-valoration");
-
+const valorationObservations = document.getElementById("valoration-observations");
 
 
 const changeStars = (n = 5)=>{
@@ -25,4 +25,11 @@ if(writeValorationBtn !== null){
         changeProjectTitleValoration(cardTitlePressed);
         toggleWriteValorationView(true);
     });
+}
+
+function sendValoration(){
+    cardIdPressed;
+    stars;
+    valorationObservations.value;
+
 }

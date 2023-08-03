@@ -7,7 +7,7 @@ $password = "";
 if($_POST){
   $username = $_POST['username'];
   $password = $_POST['password'];
-  $query = 'SELECT COUNT(`id`) AS "COUNT" FROM `users` WHERE username = "'.$username.'" AND password = "'.$password.'"';
+  $query = 'SELECT `id` FROM `users` WHERE username = "'.$username.'" AND password = "'.$password.'"';
   $sql = mysqli_query($database, $query);
   $sql = mysqli_fetch_array($sql);
   // This means user exits
@@ -15,7 +15,8 @@ if($_POST){
     $alerts->add("Se ha iniciado sesión correctamente", "success");
     session_start();
     $_SESSION['username'] = $username;
-    $_SESSION['password'] = $password;    
+    $_SESSION['password'] = $password;   
+    $_SESSION['userID'] = $sql[0]; 
     header("Location: ../");
     exit;
   }

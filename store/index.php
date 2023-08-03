@@ -190,6 +190,8 @@ $userOK = false;
                 </div>
                 <label for="valoration-observations" class="form-label">¿Algo más que añadir? ¿Detalles?</label>
                 <textarea class="form-control" id="valoration-observations" style="height: 200px;"></textarea>
+                <button type="button" class="btn btn-danger" data-bs-toggle="tooltip" data-bs-title="Cerrar" onclick="toggleWriteValorationView(false);"><i class="bi bi-box-arrow-left"></i></button>
+                <button type="button" class="btn btn-success" data-bs-toggle="tooltip" data-bs-title="Publicar"><i class="bi bi-send"></i></button>                
             </div>
         </form>
     </div>
