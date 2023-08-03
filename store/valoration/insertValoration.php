@@ -9,6 +9,7 @@ if(isset($_POST['projectID']) && isset($_POST['stars']) && isset($_POST['observa
 
     $query = "INSERT INTO `valorations` (`id`, `projectID`, `stars`, `content`, `publishDate`, `userID`) VALUES (NULL, '$projectID', '$stars', '$observations', 'NOW()', '$userID');";
     $sql = mysqli_query($database, $query);
+    echo "Inserted successfully";
 }
 
 ?>
