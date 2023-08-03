@@ -21,8 +21,8 @@ const changeStars = (n = 5)=>{
 changeStars(5);
 
 if(writeValorationBtn !== null){
-    writeValorationBtn.addEventListener('click', ()=>{
-    
+    writeValorationBtn.addEventListener('click', ()=>{    
+        changeProjectTitleValoration(cardTitlePressed);
         toggleWriteValorationView(true);
     });
 }

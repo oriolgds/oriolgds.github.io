@@ -5,5 +5,4 @@ unset($_SESSION['password']);
 session_destroy();
 header("Location: ../");
 exit;
-
 ?>

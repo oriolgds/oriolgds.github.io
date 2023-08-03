@@ -1,3 +1,5 @@
+var cardTitlePressed;
+var cardIdPressed;
 const detailView =  document.getElementById("detail-view");
 const writeValorationContainer = document.getElementById("write-valoration");
 const detailViewTopContainer = document.getElementById("detail-view-top-container");
@@ -33,7 +35,6 @@ function updateDetailView(description = "", links = ""){
     hideAllLinkButtons();
     changeDescription(description);
     links = JSON.parse(links);
-    console.log(links.length);
     if(links.length == 0){
         document.getElementById("proximately-text").classList.remove("d-none");
     }
@@ -66,6 +67,9 @@ function addListenersToCards(){
             if(card.classList.contains("disabled")){
                 return;
             }
+            cardIdPressed = card.getAttribute("vid");
+            console.log("Card id: " + cardIdPressed);
+            cardTitlePressed = card.getAttribute("title");
             disableCards();
             toggleScrollControl(false);
             toggleDetailView(true);

@@ -188,7 +188,7 @@ $userOK = false;
                 <div class="d-flex" id="stars-valoration" style="flex-wrap: wrap;">
                     
                 </div>
-                <label for="valoration-observations" class="form-label">¿Algo más que añadir?</label>
+                <label for="valoration-observations" class="form-label">¿Algo más que añadir? ¿Detalles?</label>
                 <textarea class="form-control" id="valoration-observations" style="height: 200px;"></textarea>
             </div>
         </form>
@@ -210,6 +210,7 @@ $userOK = false;
     <script src="js/fetchAndWrite.js"></script>
     <script src="js/backgroundColor.js"></script>
     <script src="js/valorationFetch.js"></script>
+    <script src="js/writeValorationContentManager.js"></script>
     <script src="js/writeValoration.js"></script>
     <script>
         window.scrollTo(0,0);
