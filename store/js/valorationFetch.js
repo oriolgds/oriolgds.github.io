@@ -1,4 +1,5 @@
 const valorationBars = document.getElementById("valoration-bars");
+const valorationDisplayContent = document.getElementById("valorations-display-content");
 const starsAvg = document.getElementById("stars-avg");
 function roundToOneDecimal(number) {
     return Number(number.toFixed(1));
@@ -65,6 +66,30 @@ function fetchValorations(projectID){
         success: function (response) {
             console.log("Bars response" + response);
             createBars(JSON.parse(response));
+        }
+    });
+}
+let valorationsCounterDisplay = 0;
+function resetContentTextValorations(){
+    valorationsCounterDisplay = 0;
+    if(valorationDisplayContent !== null){
+        valorationDisplayContent.innerHTML = "";
+    }    
+}
+
+function loadMoreTextValorations(){
+    $.ajax({
+        type: "GET",
+        contentType: "application/json; charset=utf-8",
+        url: "valoration/fetchValorationContent.php",
+        data: {
+            "min": valorationsCounterDisplay,
+            "max": valorationsCounterDisplay + 3,
+            "projectID": cardIdPressed
+        },
+        success: function (response) {
+            valorationsCounterDisplay += 4;
+            console.log(response);
         }
     });
 }

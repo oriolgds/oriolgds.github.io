@@ -125,8 +125,9 @@ $userOK = false;
                     </div>  
                     
                     <article id="valorations-display">
+                        <div id="valorations-display-content"></div>
                         <div class="container text-center">
-                            <button type="button" class="btn btn-secondary"><i class="bi bi-arrow-down-short"></i> Cargar más <i class="bi bi-arrow-down-short"></i></button>
+                            <button type="button" class="btn btn-secondary" onclick="loadMoreTextValorations();"><i class="bi bi-arrow-down-short"></i> Cargar más <i class="bi bi-arrow-down-short"></i></button>
                         </div>                        
                     </article>
                 </section>
