@@ -8,12 +8,13 @@ function createBars(values = [0, 0, 0, 0, 0]){
     let total = 0;
     // Calculate the total
     values.forEach(value => {
-        total += value;
+        total += parseInt(value);
     });    
     for (let i = 5; i > 0; i--) {
         // Calculate the percent
-        let percent = (values[i - 1] * 100) / total;
-        if(percent < 1){
+        let percent = (parseInt(values[i - 1]) * 100) / total;
+        console.log("Percent" + percent);
+        if(percent == 0){
             percent = "10px";
         } else {
             percent += "%"
@@ -33,6 +34,7 @@ if(valorationBars !== null){
     createBars([20, 0, 5, 0, 17]);
 }
 function fetchValorations(projectID){
+    if(valorationBars === null) return;
     // Reset all values
     starsAvg.innerHTML = "--";
     createBars();
