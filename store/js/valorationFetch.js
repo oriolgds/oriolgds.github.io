@@ -14,7 +14,6 @@ function createBars(values = [0, 0, 0, 0, 0]){
     for (let i = 5; i > 0; i--) {
         // Calculate the percent
         let percent = (parseInt(values[i - 1]) * 100) / total;
-        console.log("Percent" + percent);
         if(percent == 0){
             percent = "10px";
         } else {
@@ -64,7 +63,6 @@ function fetchValorations(projectID){
             "avg": "false"
         },
         success: function (response) {
-            console.log("Bars response" + response);
             createBars(JSON.parse(response));
         }
     });
@@ -73,10 +71,12 @@ let valorationsCounterDisplay = 0;
 function resetContentTextValorations(){
     valorationsCounterDisplay = 0;
     if(valorationDisplayContent !== null){
-        valorationDisplayContent.innerHTML = "";
+        valorationDisplayContent.firstElementChild.innerHTML = "";
     }    
 }
 
+// Esta variable indica cuantas reseñas se cargan cada vez que se presiona el boton de cargar más
+const valorationLoadedForeachClick = 2;
 function loadMoreTextValorations(){
     $.ajax({
         type: "GET",
@@ -84,12 +84,43 @@ function loadMoreTextValorations(){
         url: "valoration/fetchValorationContent.php",
         data: {
             "min": valorationsCounterDisplay,
-            "max": valorationsCounterDisplay + 3,
+            "max": valorationsCounterDisplay + valorationLoadedForeachClick,
             "projectID": cardIdPressed
         },
         success: function (response) {
-            valorationsCounterDisplay += 4;
+            console.log({
+                "min": valorationsCounterDisplay,
+                "max": valorationsCounterDisplay + valorationLoadedForeachClick,
+                "projectID": cardIdPressed
+            });
+            valorationsCounterDisplay += valorationLoadedForeachClick;
             console.log(response);
+            response = JSON.parse(response);
+            response.forEach(item => {
+                let stars = "";
+                for (let i = 1; i <= 5; i++) {
+                    if(i < item.stars){
+                        stars += '<span class="bi bi-star-fill"></span>';
+                    } else {
+                        stars += '<span class="bi bi-star"></span>';
+                    }
+                }
+                valorationDisplayContent.firstElementChild.innerHTML += `
+                <div class="row">
+                    <div class="col">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title">@${item.username}</h5>
+                                <div class="rating">
+                                    ${stars}
+                                </div>
+                                <p class="card-text">${item.content}</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                `
+            });
         }
     });
 }

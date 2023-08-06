@@ -68,9 +68,9 @@ function addListenersToCards(){
                 return;
             }
             cardIdPressed = card.getAttribute("vid");
-            console.log("Card id: " + cardIdPressed);
             cardTitlePressed = card.getAttribute("title");
-            disableCards();
+            resetContentTextValorations();
+            disableCards();            
             toggleScrollControl(false);
             toggleDetailView(true);
             fetchValorations(cardIdPressed);

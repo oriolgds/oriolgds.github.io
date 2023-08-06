@@ -16,7 +16,6 @@ const changeStars = (n = 5)=>{
             <i class="bi bi-star${fill}"></i>
         </div>`;
     }
-    console.log("Stars" + stars);
 }
 changeStars(5);
 
@@ -41,7 +40,6 @@ sendValorationForm.addEventListener('submit', (e)=>{
             "observations": valorationObservations.value
         },
         success: function (response) {
-            console.log("Insert valoration response: " + response);
             e.submitter.innerHTML = `¡Publicado!`;
             setTimeout(() => {
                 e.submitter.innerHTML = `<i class="bi bi-send"></i> Publicar`;
