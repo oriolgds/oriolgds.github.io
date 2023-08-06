@@ -1,12 +1,22 @@
+var cardTitlePressed;
+var cardIdPressed;
 const detailView =  document.getElementById("detail-view");
+const writeValorationContainer = document.getElementById("write-valoration");
 const detailViewTopContainer = document.getElementById("detail-view-top-container");
-const toggleScrollControl = (bodyControl = true)=>{
+const toggleScrollControl = (bodyControl = true, valorationControl = false)=>{
     if (bodyControl) {
         document.body.style.overflowY = "auto";
         detailView.style.overflowY = "hidden";
+        writeValorationContainer.style.overflowY = "hidden";
     } else {
         document.body.style.overflowY = "hidden";
         detailView.style.overflowY = "auto";
+        writeValorationContainer.style.overflowY = "hidden";
+    }
+    if(valorationControl){
+        document.body.style.overflowY = "hidden";
+        detailView.style.overflowY = "hidden";
+        writeValorationContainer.style.overflowY = "auto";
     }
 }
 function disableCards(){
@@ -25,7 +35,6 @@ function updateDetailView(description = "", links = ""){
     hideAllLinkButtons();
     changeDescription(description);
     links = JSON.parse(links);
-    console.log(links.length);
     if(links.length == 0){
         document.getElementById("proximately-text").classList.remove("d-none");
     }
@@ -58,9 +67,13 @@ function addListenersToCards(){
             if(card.classList.contains("disabled")){
                 return;
             }
-            disableCards();
+            cardIdPressed = card.getAttribute("vid");
+            cardTitlePressed = card.getAttribute("title");
+            resetContentTextValorations();
+            disableCards();            
             toggleScrollControl(false);
             toggleDetailView(true);
+            fetchValorations(cardIdPressed);
             // Update the detail view information
             updateDetailView(card.querySelector(".description").innerHTML, card.getAttribute("links"));
             card.classList.add("selected");

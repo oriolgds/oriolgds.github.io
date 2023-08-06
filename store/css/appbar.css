@@ -1,4 +1,5 @@
 appbar {
+   user-select: none;
    position: fixed;
    top: 0px;
    left: 0px;
@@ -20,14 +21,14 @@ appbar {
    animation-delay: 0s;
    animation-fill-mode: forwards;
 }
-main {
+nav {
     margin-top: 160px;
 }
 @media (max-width: 560px) {
     appbar {
         height: 330px;
     }
-    main {
+    nav {
         margin-top: 360px;
     }
 }

@@ -1,0 +1,9 @@
+.star-button {
+    padding: 10px;
+    font-size: 40px;
+    
+}
+.star-button i {
+    font-size: 40px;
+    cursor: pointer;
+}
