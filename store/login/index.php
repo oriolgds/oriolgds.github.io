@@ -34,6 +34,11 @@ if($_POST){
     <title>Iniciar sesión</title>
     <link rel="stylesheet" href="../bootstrap/css/bootstrap.css">
     <link rel="shortcut icon" href="../icon 64.png" type="image/x-icon">
+    <style>
+      main + div {
+        display: none !important;
+      }
+    </style>
   </head>
   <body class="d-flex align-items-center py-4 bg-body-tertiary container" style="max-width: 500px;">  
     <main class="form-signin w-100 m-auto">

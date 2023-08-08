@@ -67,6 +67,11 @@ $userOK = false;
             background: #555;
         }
     </style>
+    <style>
+      main + div {
+        display: none !important;
+      }
+    </style>
     <!-- https://fonts.google.com/share?selection.family=Carter%2BOne%7CComfortaa%7CFasthand%7CFoldit%7CFrijole%7CGreat%2BVibes%7CKablammo%7CLobster%7CLuckiest%2BGuy%7CMonoton%7CPress%2BStart%2B2P%7CYellowtail -->
 </head>
 
@@ -97,74 +102,72 @@ $userOK = false;
 
     </nav>
     <main>
+        <div id="detail-view">
+            <button class="custom-btn btn-14" id="detail-close" onclick="toggleDetailView(false); resetContentTextValorations();"><span><i class="bi bi-x-lg"></i> Cerrar</span></button>
+            <div id="detail-view-top-container">
+                <div class="description">
+                    <section class="text">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae nulla magnam odio asperiores quasi itaque nisi ut omnis! Reprehenderit facere porro accusamus odio nesciunt mollitia quo possimus cupiditate vero quod!
+                    </section>
+                    <section id="download-buttons" class="row text-start mt-3">
+                        <div class="col text-center" id="proximately-text">Disponible proximamente</div>
+                        <a href="http://" target="_blank" rel="noopener noreferrer" class="col text-start"><button class="custom-btn btn-7" data-bs-toggle="tooltip" id="btn-link-android" data-bs-title="Android app"><span><i class="bi bi-android2 fs-3"></i></span></button></a>
+                        <a href="http://" target="_blank" rel="noopener noreferrer" class="col text-start"><button class="custom-btn btn-8" data-bs-toggle="tooltip" id="btn-link-web" data-bs-title="Web"><span><i class="bi bi-globe2"></i></span></button></a>
+                        <a href="http://" target="_blank" rel="noopener noreferrer" class="col text-start"><button class="custom-btn btn-3" data-bs-toggle="tooltip" id="btn-link-windows" data-bs-title="Windows app"><span><i class="bi bi-windows"></i></span></button></a>
+                        <a href="http://" target="_blank" rel="noopener noreferrer" class="col text-start"><button class="custom-btn btn-5" data-bs-toggle="tooltip" id="btn-link-external" data-bs-title="Ver la web del proyecto"><span><i class="bi bi-box-arrow-up-right"></i></span></button></a>
+                    </section>
+                    <?php
+                    if ($userOK) {
+                    ?>
+                        <section id="valoration" class="mt-4 mx-0">
+                            <h2>Calificaciones y opiniones</h2>
+                            <button class="btn btn-primary mb-3" id="add-valoration-btn" role="button" type="button" onclick="toggleDetailView(false); resetContentTextValorations()"><i class="bi bi-pencil-square"></i> Escribir reseña</button>
+                            <h3 class="ms-0 my-3"><span id="stars-avg"></span><i class="bi bi-star ms-2"></i></h3>
+                            <div id="valoration-bars">
+                                <!-- Estrellas -->
 
+                            </div>
+
+                            <article id="valorations-display" class="mt-5">
+                                <small>Aqui apareceran las valoraciones con texto:</small>
+                                <div id="valorations-display-content" class="mt-2">
+
+                                    <div class="container">
+                                    </div>
+
+                                </div>
+                                <div class="container text-center">
+                                    <button type="button" class="btn btn-secondary" onclick="loadMoreTextValorations();"><i class="bi bi-arrow-down-short"></i> Cargar más <i class="bi bi-arrow-down-short"></i></button>
+                                </div>
+                            </article>
+                        </section>
+                    <?php } else { ?>
+                        <h2 class="mt-4 mx-0 text-start">Calificaciones y opiniones</h2>
+                        <small>Para poder acceder a las reseñas inicia sesión con una cuenta de Ors Store o crearte una</small>
+                        <br>
+                        <div class="text-center d-flex row mt-3" role="group" aria-label="Sign in and sign up">
+                            <a href="create/" type="button" class="btn btn-warning m-0 col mx-1">Crear cuenta</a>
+                            <a href="login/" type="button" class="btn btn-primary m-0 col mx-1">Login</a>
+                        </div>
+                    <?php } ?>
+                </div>
+            </div>
+        </div>
+        <div id="write-valoration">
+            <h2 class="display-2 text-break">Reseña de <span class="title">Adventure Jam</span></h2>
+            <form action="" method="POST" id="send-valoration-form">
+                <div class="mb-3">
+                    <div class="d-flex" id="stars-valoration" style="flex-wrap: wrap;"></div>
+                    <label for="valoration-observations" class="form-label">¿Algo más que añadir? ¿Detalles?</label>
+                    <textarea class="form-control" id="valoration-observations" style="height: 200px;"></textarea>
+                    <button type="button" class="btn btn-danger" id="btn-close-valoration"><i class="bi bi-box-arrow-left"></i> Cerrar</button>
+                    <button type="submit" class="btn btn-success"><i class="bi bi-send"></i> Publicar</button>
+                </div>
+            </form>
+        </div>
     </main>
 
 
-
-    <div id="detail-view">
-        <button class="custom-btn btn-14" id="detail-close" onclick="toggleDetailView(false); resetContentTextValorations();"><span><i class="bi bi-x-lg"></i> Cerrar</span></button>
-        <div id="detail-view-top-container">
-            <div class="description">
-                <section class="text">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae nulla magnam odio asperiores quasi itaque nisi ut omnis! Reprehenderit facere porro accusamus odio nesciunt mollitia quo possimus cupiditate vero quod!
-                </section>
-                <section id="download-buttons" class="row text-start mt-3">
-                    <div class="col text-center" id="proximately-text">Disponible proximamente</div>
-                    <a href="http://" target="_blank" rel="noopener noreferrer" class="col text-start"><button class="custom-btn btn-7" data-bs-toggle="tooltip" id="btn-link-android" data-bs-title="Android app"><span><i class="bi bi-android2 fs-3"></i></span></button></a>
-                    <a href="http://" target="_blank" rel="noopener noreferrer" class="col text-start"><button class="custom-btn btn-8" data-bs-toggle="tooltip" id="btn-link-web" data-bs-title="Web"><span><i class="bi bi-globe2"></i></span></button></a>
-                    <a href="http://" target="_blank" rel="noopener noreferrer" class="col text-start"><button class="custom-btn btn-3" data-bs-toggle="tooltip" id="btn-link-windows" data-bs-title="Windows app"><span><i class="bi bi-windows"></i></span></button></a>
-                    <a href="http://" target="_blank" rel="noopener noreferrer" class="col text-start"><button class="custom-btn btn-5" data-bs-toggle="tooltip" id="btn-link-external" data-bs-title="Ver la web del proyecto"><span><i class="bi bi-box-arrow-up-right"></i></span></button></a>
-                </section>
-                <?php
-                if ($userOK) {
-                ?>
-                    <section id="valoration" class="mt-4 mx-0">
-                        <h2>Calificaciones y opiniones</h2>
-                        <button class="btn btn-primary mb-3" id="add-valoration-btn" role="button" type="button" onclick="toggleDetailView(false); resetContentTextValorations()"><i class="bi bi-pencil-square"></i> Escribir reseña</button>
-                        <h3 class="ms-0 my-3"><span id="stars-avg"></span><i class="bi bi-star ms-2"></i></h3>
-                        <div id="valoration-bars">
-                            <!-- Estrellas -->
-
-                        </div>
-
-                        <article id="valorations-display" class="mt-5">
-                            <small>Aqui apareceran las valoraciones con texto:</small>
-                            <div id="valorations-display-content" class="mt-2">
-                            
-                                <div class="container">
-                                </div>
-
-                            </div>
-                            <div class="container text-center">
-                                <button type="button" class="btn btn-secondary" onclick="loadMoreTextValorations();"><i class="bi bi-arrow-down-short"></i> Cargar más <i class="bi bi-arrow-down-short"></i></button>
-                            </div>
-                        </article>
-                    </section>
-                <?php } else { ?>
-                    <h2 class="mt-4 mx-0 text-start">Calificaciones y opiniones</h2>
-                    <small>Para poder acceder a las reseñas inicia sesión con una cuenta de Ors Store o crearte una</small>
-                    <br>
-                    <div class="text-center d-flex row mt-3" role="group" aria-label="Sign in and sign up">
-                        <a href="create/" type="button" class="btn btn-warning m-0 col mx-1">Crear cuenta</a>
-                        <a href="login/" type="button" class="btn btn-primary m-0 col mx-1">Login</a>
-                    </div>
-                <?php } ?>
-            </div>
-        </div>
-    </div>
-    <div id="write-valoration">
-        <h2 class="display-2 text-break">Reseña de <span class="title">Adventure Jam</span></h2>
-        <form action="" method="POST" id="send-valoration-form">
-            <div class="mb-3">
-                <div class="d-flex" id="stars-valoration" style="flex-wrap: wrap;"></div>
-                <label for="valoration-observations" class="form-label">¿Algo más que añadir? ¿Detalles?</label>
-                <textarea class="form-control" id="valoration-observations" style="height: 200px;"></textarea>
-                <button type="button" class="btn btn-danger" id="btn-close-valoration"><i class="bi bi-box-arrow-left"></i> Cerrar</button>
-                <button type="submit" class="btn btn-success"><i class="bi bi-send"></i> Publicar</button>
-            </div>
-        </form>
-    </div>
     <script src="bootstrap/js/bootstrap.bundle.js"></script>
     <script>
         function enableTooltips() {
@@ -187,12 +190,7 @@ $userOK = false;
     <script>
         window.scrollTo(0, 0);
     </script>
-</body>
-
-</html>
-
-
-<!-- <h3>Para comunicarse</h3>
+    <!-- <h3>Para comunicarse</h3>
     <carrousel>
         <div class="btn-cr-container left">
             <button class="ripple btn-cr cr-previous"><i class="bi bi-caret-left"></i></button>
@@ -238,3 +236,8 @@ $userOK = false;
             <button class="ripple btn-cr cr-posterior"><i class="bi bi-caret-right"></i></button>
         </div>
     </carrousel> -->
+    <div class="d-none">
+</body>
+
+</html>
+</div>
