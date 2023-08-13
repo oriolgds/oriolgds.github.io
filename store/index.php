@@ -101,7 +101,6 @@ $userOK = false;
         ?>
 
     </nav>
-    <main>
         <div id="detail-view">
             <button class="custom-btn btn-14" id="detail-close" onclick="toggleDetailView(false); resetContentTextValorations();"><span><i class="bi bi-x-lg"></i> Cerrar</span></button>
             <div id="detail-view-top-container">
@@ -165,7 +164,7 @@ $userOK = false;
                 </div>
             </form>
         </div>
-    </main>
+        <main></main>
 
 
     <script src="bootstrap/js/bootstrap.bundle.js"></script>
