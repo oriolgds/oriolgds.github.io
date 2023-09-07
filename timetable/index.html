@@ -11,7 +11,39 @@
   </head>
   <body class="p-5">
     <div class="row">
-      <div class="col-9 border rounded p-2 me-2"></div>
+      <div class="col-12 col-lg-9 border rounded p-2 me-sm-2 mb-3">
+        <table class="table">
+          <thead>
+            <tr>
+              <th scope="col">#</th>
+              <th scope="col">First</th>
+              <th scope="col">Last</th>
+              <th scope="col">Handle</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">1</th>
+              <td>Mark</td>
+              <td>Otto</td>
+              <td>@mdo</td>
+            </tr>
+            <tr>
+              <th scope="row">2</th>
+              <td>Jacob</td>
+              <td>Thornton</td>
+              <td>@fat</td>
+            </tr>
+            <tr>
+              <th scope="row">3</th>
+              <td colspan="2">Larry the Bird</td>
+              <td>@twitter</td>
+            </tr>
+          </tbody>
+        </table>
+
+
+      </div>
       <div class="col border rounded p-2">
         <div class="input-group mb-3">
           <h3 class="mb-3 mt-2">Crear asignatura:</h3>
@@ -25,7 +57,7 @@
           </div>    
           <hr class="mx-2">
           <h4 class="mt-0 user-select-none">Mis asignaturas: </h4>
-          <div class="form-check form-switch">
+          <div class="form-check form-switch ms-2 ms-sm-5 ms-lg-0">
             <input class="form-check-input" type="checkbox" role="switch" id="switch-edit-mode">
             <label class="form-check-label" for="switch-edit-mode" id="switch-edit-mode-label">Modo drag&drop</label>
           </div>          
