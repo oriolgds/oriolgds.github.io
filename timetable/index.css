@@ -1,3 +1,10 @@
+hr {
+    border: none; /* Remove the default border */
+    height: 0.5px; /* Set the height of the line */
+    background-color: black;
+    width: 100%;/* Add some margin above and below the line */
+  }
+
 .list-group button input {
     width: 50px;
 }

@@ -22,9 +22,13 @@
             <label for="color-select">Color: </label>
             <input class="form-control ms-2 rounded" type="color" id="color-select" value="#ff0000">
           </div>    
-          <ul class="my-3 list-group w-100" id="subject-display">
-            <button type="button" class="list-group-item list-group-item-action rounded text-truncate d-flex align-content-center my-1 border">Catalan <input type="color" class="form-control ms-auto"></button>
-            <button type="button" class="list-group-item list-group-item-action rounded text-truncate d-flex align-content-center my-1 border">Catalan <input type="color" class="form-control ms-auto"></button>            
+          <hr class="mx-2">
+          <h4 class="mt-0">Mis asignaturas: </h4>
+          <div class="form-check form-switch">
+            <input class="form-check-input" type="checkbox" role="switch" id="switch-edit-mode">
+            <label class="form-check-label" for="switch-edit-mode" id="switch-edit-mode-label">Modo drag&drop</label>
+          </div>          
+          <ul class="list-group w-100" id="subject-display">           
           </ul>      
         </div>        
       </div>
