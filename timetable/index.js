@@ -9,5 +9,10 @@ createSubjectBtn.addEventListener('click', addSubject);
 
 document.addEventListener('DOMContentLoaded', ()=>{
     subjects = subjects.restoreFromUrl('subjects');
+    rows = rows.restoreFromUrl("rows");
+    // Restore the id list
+    subjects.forEach(subject => {
+        ids.push(subject.id);
+    });
     displaySubjects();
 })

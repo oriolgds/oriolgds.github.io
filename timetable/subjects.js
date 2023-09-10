@@ -1,4 +1,17 @@
 var subjects = [];
+var ids = [];
+function generateID() {
+  const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+  const idLength = 3;
+  let id = '';
+
+  for (let i = 0; i < idLength; i++) {
+    const randomIndex = Math.floor(Math.random() * characters.length);
+    id += characters.charAt(randomIndex);
+  }
+
+  return ids.includes(id) ? generateID() : id;
+}
 function hexToRgb(hex) {
   // Remove the # symbol if present
   hex = hex.replace("#", "");
@@ -37,7 +50,7 @@ const addSubject = () => {
   createSubjectBtn.setAttribute("disabled", true);
   const name = subjectName.value;
   const color = colorSelector.value;
-  subjects.push({ name: name, color: color });
+  subjects.push({ name: name, color: color, id: generateID() });
   subjects.saveInUrl("subjects");
   createSubjectBtn.removeAttribute("disabled");
   displaySubjects();
