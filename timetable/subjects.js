@@ -157,12 +157,13 @@ const withDragAndDrop = () => {
 
     subjectDisplay.appendChild(buttonElement);
 
-    buttonElement.addEventListener('dragstart', ()=>{
+    buttonElement.addEventListener('dragstart', (ev)=>{
+      ev.dataTransfer.setData("ids", subject.id);
       document.querySelectorAll(".draggableZone").forEach(node => {
         node.style.backgroundColor = "#abffb4";
       });
     });
-    buttonElement.addEventListener('dragend', ()=>{
+    buttonElement.addEventListener('dragend', (ev)=>{
       document.querySelectorAll(".draggableZone").forEach(node => {
         node.style.backgroundColor = "transparent";
       });

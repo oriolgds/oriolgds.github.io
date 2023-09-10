@@ -2,7 +2,6 @@ const tbody = document.querySelector('tbody');
 const btnAddRowButton = document.getElementById("add-row-button");
 const btnDeleteRowButton = document.getElementById("delete-row-button")
 var rows = [];
-
 function addRowLast(){
     rows.push({
         "hour": "0:00",
@@ -38,25 +37,34 @@ function displayTable(){
 
         for (let i = 0; i < 5; i++) {       
             let td = document.createElement("td");
-            
-            if(row.days[i] === undefined){
+            if(row.days[i] == null || row.days[i] == undefined){
                 td.textContent = "Vacio";
                 td.classList.add(
-                    'draggableZone'
+                    'draggableZone',
                 );
             }
-            subjects.forEach((subject) => {
-                if(subject.id === row.days[i]){
-                    td.textContent = subject.name;
-                    td.style.backgroundColor = subject.color;
-                }
-            });
+            else {
+                subjects.forEach((subject) => {
+                    if(subject.id === row.days[i]){
+                        td.textContent = subject.name;
+                        td.style.backgroundColor = subject.color;
+                    }
+                });
+            }
+            
             tr.appendChild(td);
 
             td.addEventListener('dragover', (ev)=>{
                 ev.preventDefault();
-                console.log(td);
             })
+            td.addEventListener('drop', (ev)=>{
+                ev.preventDefault();
+                row.days[i] = ev.dataTransfer.getData("ids");
+                rows.saveInUrl("rows");
+                console.log(row);
+                displayTable();
+            })
+            
         }
         
         tbody.appendChild(tr);

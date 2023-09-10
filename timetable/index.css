@@ -14,7 +14,6 @@ hr {
 }
 .draggableZone {
     transition: 500ms all;
-    border-radius: 20px;
     padding: 5px;
 }
 table {
