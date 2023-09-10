@@ -2,7 +2,7 @@ var subjects = [];
 var ids = [];
 function generateID() {
   const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
-  const idLength = 3;
+  const idLength = 10;
   let id = '';
 
   for (let i = 0; i < idLength; i++) {
@@ -12,35 +12,8 @@ function generateID() {
 
   return ids.includes(id) ? generateID() : id;
 }
-function hexToRgb(hex) {
-  // Remove the # symbol if present
-  hex = hex.replace("#", "");
 
-  // Extract the individual color components
-  var r = parseInt(hex.substring(0, 2), 16);
-  var g = parseInt(hex.substring(2, 4), 16);
-  var b = parseInt(hex.substring(4, 6), 16);
 
-  // Return the RGB values
-  return "rgb(" + r + ", " + g + ", " + b + ")";
-}
-function getTextColor(background) {
-  // Convert background color to RGB values
-  var rgb = background.match(/\d+/g);
-  var red = parseInt(rgb[0]);
-  var green = parseInt(rgb[1]);
-  var blue = parseInt(rgb[2]);
-
-  // Calculate luminance
-  var luminance = (0.299 * red + 0.587 * green + 0.114 * blue) / 255;
-
-  // Check if luminance is below threshold
-  if (luminance < 0.5) {
-    return 'white';
-  } else {
-    return 'black';
-  }
-}
 const subjectName = document.getElementById("subject-name");
 const colorSelector = document.getElementById("color-select");
 const createSubjectBtn = document.getElementById("create-subject-btn");
@@ -108,11 +81,14 @@ const withEditMode = () => {
     function writtingInName() {
       subjects[i]["name"] = inputName.value;
       subjects.saveInUrl("subjects");
+      displayTable();
     }
     function deleteIndex() {
       subjects.splice(i, 1);
       subjects.saveInUrl("subjects");
       displaySubjects();
+      displayTable();
+      
     }
     // Add listeners
     inputName.addEventListener("keydown", writtingInName);
@@ -122,6 +98,7 @@ const withEditMode = () => {
     inputColor.addEventListener("change", () => {
       subjects[i]["color"] = inputColor.value;
       subjects.saveInUrl("subjects");
+      displayTable();
     });
 
     subjectDisplay.appendChild(buttonElement);
