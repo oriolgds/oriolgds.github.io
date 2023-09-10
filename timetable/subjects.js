@@ -130,11 +130,10 @@ const withEditMode = () => {
   });
 };
 const withDragAndDrop = () => {
-  let index = 0;
-  subjects.forEach((subject) => {
+  subjects.forEach((subject, index) => {
     const i = index;
-    const buttonElement = document.createElement("button");
-    buttonElement.setAttribute("type", "button");
+    const buttonElement = document.createElement("div");
+    // buttonElement.setAttribute("type", "button");
     buttonElement.classList.add(
       "list-group-item",
       "list-group-item-action",
@@ -143,13 +142,31 @@ const withDragAndDrop = () => {
       "d-flex",
       "align-content-center",
       "my-1",
-      "border"
+      "border",
+      'text-truncate'
     );
+    buttonElement.setAttribute("ids", subject.id);
     buttonElement.style.backgroundColor = subject.color;
     buttonElement.textContent = subject.name;
     buttonElement.style.color = getTextColor(hexToRgb(subject.color));
+    buttonElement.style.cursor = "pointer";
+
+
+    // Drag and drop functionality
+    buttonElement.draggable = true;
+
     subjectDisplay.appendChild(buttonElement);
-    index++;
+
+    buttonElement.addEventListener('dragstart', ()=>{
+      document.querySelectorAll(".draggableZone").forEach(node => {
+        node.style.backgroundColor = "#abffb4";
+      });
+    });
+    buttonElement.addEventListener('dragend', ()=>{
+      document.querySelectorAll(".draggableZone").forEach(node => {
+        node.style.backgroundColor = "transparent";
+      });
+    })
   });
 };
 const displaySubjects = () => {

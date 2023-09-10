@@ -15,4 +15,6 @@ document.addEventListener('DOMContentLoaded', ()=>{
         ids.push(subject.id);
     });
     displaySubjects();
+
+    displayTable();
 })

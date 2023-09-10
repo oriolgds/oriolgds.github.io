@@ -12,3 +12,12 @@ hr {
     width: 100%;
     
 }
+.draggableZone {
+    transition: 500ms all;
+    border-radius: 20px;
+    padding: 5px;
+}
+table {
+    border-collapse: separate;
+    border-spacing: 10px;
+}
