@@ -55,7 +55,7 @@ function displayTable(){
         let th = document.createElement("th");
         th.scope = "row";
         let inputHour = document.createElement("input");
-        inputHour.classList.add('form-control', 'text-center');
+        inputHour.classList.add('form-control', 'text-center', 'hour-input');
         inputHour.type = "time";
         inputHour.value = row.hour;
 
@@ -87,7 +87,7 @@ function displayTable(){
                         td.appendChild(text);
                         const btnDelete = document.createElement("button");
                         btnDelete.type = "button";
-                        btnDelete.classList.add('btn', 'btn-danger', 'mt-1');
+                        btnDelete.classList.add('btn', 'btn-danger', 'mt-1', 'btn-delete-cell');
                         btnDelete.innerHTML = `<i class="bi bi-trash3"></i>`;
 
                         td.appendChild(btnDelete);
