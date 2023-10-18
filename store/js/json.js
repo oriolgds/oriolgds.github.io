@@ -151,6 +151,19 @@ const dataCards = {
                 "link": "http://orl.22web.org"
             }
         ],
+    },
+    7: {
+        "id": 7,
+        "title": "Esquive",
+        "imgSRC": "Esquive.webp",
+        "imgALT": "Icon",
+        "description": "Esquiva a los creapers y consigue la máxima puntuación",
+        "links": [
+            {
+                "type": "windows",
+                "link": "https://github.com/oriolgds/Godot-projects/raw/master/Exploration/builds/builds.zip"
+            }
+        ],
     }
 };
 
@@ -164,7 +177,7 @@ const data = [
     {
         "type": "carrousel",
         "cards": [
-            dataCards[6]
+            dataCards[7]
         ]
     },
     // ** Para jugar ** 
@@ -177,6 +190,7 @@ const data = [
         "cards": [
             dataCards[0],
             dataCards[1],
+            dataCards[7]
         ]
     },
     // ** Para comunicar ** 
