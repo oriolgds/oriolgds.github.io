@@ -1,8 +1,8 @@
-php_value display_errors Off
-php_value mbstring.http_input auto
-php_value date.timezone Europe/Madrid
 ErrorDocument 400 http://oriol.22web.org/error/
 ErrorDocument 401 http://oriol.22web.org/error/
 ErrorDocument 403 http://oriol.22web.org/error/
 ErrorDocument 404 http://oriol.22web.org/error/
 ErrorDocument 503 http://oriol.22web.org/error/
+php_value display_errors Off
+php_value mbstring.http_input auto
+php_value date.timezone Europe/Madrid

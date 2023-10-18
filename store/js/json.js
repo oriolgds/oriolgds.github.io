@@ -138,11 +138,35 @@ const dataCards = {
                 "link": "http://orsmail.22web.org"
             }
         ]
+    },
+    6: {
+        "id": 6,
+        "title": "Ors Shortener",
+        "imgSRC": "Ors Shortener.png",
+        "imgALT": "Ors Shortener",
+        "description": "Introduce la url que quieras acortar aquí y nosotros nos encargaremos de todo 😉",
+        "links": [
+            {
+                "type": "web",
+                "link": "http://orl.22web.org"
+            }
+        ],
     }
 };
 
 
 const data = [
+    // ** Nuevo **
+    {
+        "type": "title",
+        "content": "🆕 Nuevo 🆕"
+    },
+    {
+        "type": "carrousel",
+        "cards": [
+            dataCards[6]
+        ]
+    },
     // ** Para jugar ** 
     {
         "type": "title",
@@ -174,6 +198,7 @@ const data = [
     {
         "type": "carrousel",
         "cards": [
+            dataCards[6],
             dataCards[2],
             dataCards[3],
             dataCards[4],
